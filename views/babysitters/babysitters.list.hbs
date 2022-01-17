@@ -1,0 +1,18 @@
+<div class="container">
+
+<h1>Babysitters Profiles</h1>
+
+	{{#each babysitters}}
+
+		<div class="card">
+			<img src="{{this.picture}}" alt="{{this.firstName}}" />
+            <p>{{this.firstName}} {{this.lastName}}</p>
+            <p>Age: {{this.age}}</p>
+		    <p>Experiences: {{this.experience}}</p>
+            <p>Resume: {{this.resume}}</p>   
+			<a href="/users/{{this._id}}">More info...</a>
+		</div>
+
+	{{/each}}
+
+</div>
