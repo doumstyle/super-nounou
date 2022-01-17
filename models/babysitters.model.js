@@ -37,11 +37,7 @@ const babysittersSchema = new Schema({
         type: [String],
         enum: ['fullTime', 'partTime', 'evening', 'afterSchool'],
     },
-    ratings: String,
-    position: {
-        type: "Point",
-        coordinates: [40, 5],
-    }
+    ratings: String    
 });
 
 module.exports = model('Babysitter', babysittersSchema);

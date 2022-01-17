@@ -45,7 +45,7 @@ const families = [
         kidsAge:1,
         description: "Arthur is a lovely baby who sleep all the time",
         availability: "fullTime" 
-      }, 
+      }
 ];
 
 (async function insertFamilies() {

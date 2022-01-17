@@ -42,7 +42,7 @@ const babysitters = [
       experience:10,
       resume: " i am graduated from babyschool i enjoy taking care of all children",
       availability: "fullTime"
-    },
+    }
   
   ];
 

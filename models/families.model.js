@@ -29,7 +29,7 @@ const familiesSchema = new Schema({
     description: {
 
     },
-    kids: {
+    numberOfKids: {
         type: Number,
         required: true,
     },
@@ -41,11 +41,7 @@ const familiesSchema = new Schema({
         type: [String],
         enum: ['fullTime', 'partTime', 'evening', 'afterSchool'],
     },
-    ratings: String,
-    position: {
-        type: "Point",
-        coordinates: [40, 5],
-    }
+    ratings: String    
 });
 
 module.exports = model('Family', familiesSchema);
