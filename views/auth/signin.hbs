@@ -1,11 +1,18 @@
-<form method="post" action="/auth/signin" class="form">
-<!--TODO: add here flash messag partail -->
-    <label for="email">email</label>
-    <input class="input" type="email" id="email" name="email" value="test@email.com">
-    <label for="password">password</label>
-    <input class="input" type="password" id="password" name="password" value="12345">
-    <button class="btn">signin</button>
-</form>
-<p>
-    Don't have an account yet ? <a href="/auth/signup">signup</a>
-</p>
+<div class="container">
+    <h2>Welcome! Please Sign In Below</h2>
+    <form method="post" action="/auth/signin" class="d-flex flex-column mb-3">
+    <!--TODO: add here flash messag partail -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="input form-control form-control-lg" type="email" id="email" name="email" value="test@email.com">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input class="input form-control form-control-lg" type="password" id="password" name="password" value="12345">
+        </div>
+        <button class="btn btn-lg btn-success d-flex align-self-center">Sign in</button>
+    </form>
+    <p class="text-center">
+        Don't have an account yet ? <a href="/auth/signup">Sign up</a>
+    </p>
+</div>
