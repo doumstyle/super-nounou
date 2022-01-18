@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 router.get("/babysitters", (req, res,next) => {
 	Babysitters.find()
 		.then((babysitters) => {
-			res.render("baysitters/babysitterList.hbs", {
+			res.render("babysitters/babysittersList.hbs", {
 				babysitters: babysitters,
 				css: ["babysitters"],
 			});

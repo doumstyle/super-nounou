@@ -12,7 +12,7 @@ const session = require("express-session");
 const indexRouter = require('./routes/index.route');
 const authRouter = require('./routes/auth.route');
 const familiesRouter = require('./routes/families.route');
-const babysittersRouter = require('./route/babysitters.route');
+const babysittersRouter = require('./routes/babysitters.route');
 
 const app = express();
 
