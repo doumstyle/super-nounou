@@ -1,0 +1,10 @@
+<div class="container">
+	<div class="card" style="background-color: antiquewhite;">
+		<img src="{{babysitter.picture}}" alt="{{babysitter.lastName}}" />
+		<p>Name: {{babysitter.firstName}} {{babysitter.lastName}}</p>
+		<p>Age: {{babysitter.age}} </p>
+       
+		<a href="/babysitters/{{babysitter._id}}/delete"><i class="fas fa-user-slash"></i></a>
+		<a href="/babysitters/{{babysitter._id}}/update"><i class="far fa-edit"></i></a>
+	</div>
+</div>
