@@ -1,0 +1,44 @@
+<form action="/users/create" method="POST" enctype="multipart/form-data">
+
+	<label for="firstName">First name:</label>
+	<input type="text" id="firstName" name="firstName" required />
+
+	<label for="lastName">Last name:</label>
+	<input type="text" id="lastName" name="lastName" />
+
+    <label for="role">Role:</label>
+	<input type="hidden" id="role" name="role" />
+
+    <label for="age">Age</label>
+	<input type="text" id="age" name="age" />
+
+	<label for="cellphone">cellphone:</label>
+	<input type="text" id="cellphone" name="cellphone" />
+
+	<label for="experience">experience:</label>
+	<input type="text" id="experience" name="experience"/>
+
+    <label for="resume">resume:</label>
+	<input type="textarea" id="resume" name="resume"/>
+
+    <label for="numberOfKids">Number of kids:</label>
+	<input type="text" id="numberOfKids" name="numberOfKids"/>
+
+    <label for="kidsAge">Kids age:</label>
+	<input type="text" id="kidsAge" name="kidsAge"/>
+	
+	<label for="availability">Availability: </label>
+	<select name="availability" id="availability">
+		<option value="fullTime">Full Time</option>
+		<option value="partTime">Part Time</option>
+		<option value="evening">Evening</option>
+        <option value="afterSchool">After School</option>
+	</select>
+
+	<label for="picture">Picture:</label>
+
+	<input type="text" id="picture" name="picture" />
+
+	<button>Create a profile</button>
+
+</form>
