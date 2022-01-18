@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { model, Schema } = mongoose;
 
-const babysittersSchema = new Schema({
+const usersSchema = new Schema({
     firstName: {
         type: String,
         required: true,
@@ -9,6 +9,10 @@ const babysittersSchema = new Schema({
     lastName: {
         type: String,
         required: true,
+    },
+    role: {
+        type: String,
+        enum: ["babysitter", "family"]
     },
     password: {
         type: String,
@@ -18,9 +22,14 @@ const babysittersSchema = new Schema({
         type: String,
         required: true,
     },
-    cellphone: {
+    telephone: {
         type: Number,
-        required: true,
+        validate: {
+            validator: function(v) {
+                return /d{10}/.test(v);
+            },
+            message: '{VALUE} is not a valid 10-digit number!'
+        }
     },
     picture: {
         type: String,
@@ -28,16 +37,29 @@ const babysittersSchema = new Schema({
     },
     experience: {
         type: Number,
-        required: true,
+        //required: true,
     },
     resume: {
         type: String,
     },
+
+    description: String,
+
+    numberOfKids: {
+        type: Number,
+        //required: true,
+    },
+    kidsAge: {
+        type: Number,
+        //required: true
+    },
+
     availability: {
         type: [String],
         enum: ['fullTime', 'partTime', 'evening', 'afterSchool'],
     },
-    ratings: String    
+
+    //ratings: String    
 });
 
-module.exports = model('Babysitter', babysittersSchema);
+module.exports = model('User', usersSchema);
