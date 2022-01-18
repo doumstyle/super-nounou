@@ -59,13 +59,8 @@ app.use(function myCookieLogger(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
-<<<<<<< HEAD
-app.use('/families', familiesRouter); 
-app.use('/babysitters', babysittersRouter);
-=======
 app.use('/users', usersRouter);
 
->>>>>>> Ting
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
