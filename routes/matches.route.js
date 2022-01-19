@@ -8,21 +8,34 @@ router.get("/", (req, res) => {
 
 
 
-router.post('/:likedId', (req, res) => {
-  //liker :req.session.currentUser._id 
-  //liked : req.params.likedId
-  Matches.create(req.body)
-      .then(match => {
-         Matches.findById(match._id)
-              //.populate("User")
-              //.then(match => res.json({ data: match }))
-              .then(match => res.render("matches/contacts", {cellphone: match}))
-      })
-      .catch(error => console.log(error));
+router.post('/:likedId', async (req, res, ext) => {
+
+try {
+  const likerId = req.session.currentUser._id; 
+  const likedId = req.params.likedId;
+  const newLike = await  Matches.create({liker: likerId, liked: likedId});
+  console.log("newLike avant populate >>", newLike);
+  const match  = await Matches.findOne({liked : likerId, liker: likedId});
+
+  console.log("match >>", match);
+  console.log("match type >>", typeof match);
+  if (match !== null) {
+    await Matches.findById(newLike._id)
+    //.populate("User");
+    console.log("newLike.liker après populate >>", newLike.liker);
+    res.render("matches/contacts", {
+      liker: newLike.liker,
+      liked: newLike.liked
     });
+  } else {
+    res.redirect('/users');
+  }
+}
+  catch (error) {
+    console.error(error);  
 
-
-
+	}
+});
 
 
 module.exports = router;

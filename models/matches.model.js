@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const { model, Schema } = mongoose;
 
 const matchesSchema = new Schema({
-    babysitter: {
+    liker: {
         type: Schema.Types.ObjectId,
         ref: "User",
     },
-    family: {
+    liked: {
         type: Schema.Types.ObjectId,
        ref: "User"
     }
