@@ -9,6 +9,7 @@ router.get("/", (req, res, next) => {
       res.render("users/usersList", {
         users: users,
         css: ["users"],
+        js: ["carousel"]
       });
     })
     .catch(next);
