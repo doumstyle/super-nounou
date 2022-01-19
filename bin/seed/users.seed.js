@@ -13,6 +13,9 @@ const users = [
     password: "lyndaDupond",
     email: "lynda.dupond@gmail.com",
     cellphone: "0612233445",
+    address: "110 rue de la convention 75015 Paris",
+    latitude:48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427168/84_zstpqh.jpg",
     experience: 2,
@@ -27,6 +30,9 @@ const users = [
     password: "sophieDurand",
     email: "sophie.durand@gmail.com",
     cellphone: "0656677889",
+    address: "82 avenue Félix Faure 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427166/52_yifjrn.jpg",
     experience: 6,
@@ -41,6 +47,9 @@ const users = [
     password: "marienoelFrance",
     email: "marienoel.france@gmail.com",
     cellphone: "0691234567",
+    address:" 28 rue de vaugirard 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/62_bu6hcb.jpg",
     experience: 10,
@@ -56,6 +65,9 @@ const users = [
     password: "jeanetteMoss",
     email: "jeanetteMoss@gmail.com",
     cellphone: "0691234567",
+    address: "18 boulevard de grenelle 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/89_gnjo3l.jpg",
     experience: 3,
@@ -70,6 +82,9 @@ const users = [
     password: "amandaHalliday",
     email: "amanda.halliday@gmail.com",
     cellphone: "0691234567",
+    address: "56 avenue Emile Zola 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/79_jtjsri.jpg",
     experience: 2,
@@ -85,6 +100,9 @@ const users = [
     password: "marySaulsbury",
     email: "mary.Saulsbury@gmail.com",
     cellphone: "0691234567",
+    address: "24 rue Sébastien Mercier 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/85_ualbng.jpg",
     experience: 5,
@@ -99,6 +117,9 @@ const users = [
     password: "annaBrown",
     email: "anna.Brown@gmail.com",
     cellphone: "0691234567",
+    address: "43 rue du Théâtre 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/3_bhcn52.jpg",
     experience: 10,
@@ -113,6 +134,9 @@ const users = [
     password: "rosemaryChapman",
     email: "rosemary.Chapman@gmail.com",
     cellphone: "0691234567",
+    address: "8 rue Tiphaine 75015 Paris",
+    latitude: 48.839750,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/86_evzxio.jpg",
     experience: 25,
@@ -128,6 +152,9 @@ const users = [
     password: "PatriciaSkinner",
     email: "patricia.skinner@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/83_hxonua.jpg",
     experience: 10,
@@ -142,6 +169,9 @@ const users = [
     password: "shawnaWash",
     email: "shawna.Wash@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/14_spm7jb.jpg",
     experience: 11,
@@ -157,6 +187,9 @@ const users = [
     password: "JoyceOliva",
     email: "joyce.Oliva@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504747/71_za8sjd.jpg",
     experience: 2,
@@ -171,6 +204,9 @@ const users = [
     password: "kellieMoore",
     email: "kellie.Moore@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504726/87_mnyn3q.jpg",
     experience: 5,
@@ -186,6 +222,9 @@ const users = [
     password: "MaureenHarris",
     email: "maureenHarris@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504698/93_cj0uzf.jpg",
     experience: 5,
@@ -201,6 +240,9 @@ const users = [
     password: "darleneCroskey",
     email: "darleneCroskey@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1642504400/59_nqpcjj.jpg",
     experience: 9,
@@ -216,6 +258,9 @@ const users = [
     password: "michelleClifford",
     email: "michelleClifford@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504383/91_am6jyi.jpg",
     experience: 1,
@@ -231,6 +276,9 @@ const users = [
     password: "amyPrice",
     email: "amyPrice@gmail.com",
     cellphone: "0691234567",
+    address:
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1642504295/48_disrwp.jpg",
     experience: 1,
@@ -247,6 +295,9 @@ const users = [
     password: "carolineSmith",
     email: "caroline.smith@gmail.com",
     cellphone: "0712233445",
+    address: "90 rue de la convention 75015 Paris"
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427161/images-4_rcjqon.jpg",
     numberOfKids: 1,
@@ -263,6 +314,9 @@ const users = [
     password: "sarahRobert",
     email: "sarah.robert@gmail.com",
     cellphone: "07122334454",
+    address: "65 boulevard grenelle 75015 Paris",
+    latitude: 48.839750,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610871/Super%20Nounou/twokids_lel338.jpg",
     numberOfKids: 2,
@@ -279,6 +333,9 @@ const users = [
     password: "jenniferStone",
     email: "jennifer.stone@gmail.com",
     cellphone: "0712233777",
+    address: "18 rue Violet 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/twoboys_thalau.jpg",
     numberOfKids: 1,
@@ -294,6 +351,9 @@ const users = [
     password: "lisaDunston",
     email: "lisa.dunston@gmail.com",
     cellphone: "0712233777",
+    address: "76 rue du docteur Finlay 75015 Paris"
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/geese-2494952__480_lcgxoy.webp",
     numberOfKids: 2,
@@ -309,6 +369,9 @@ const users = [
     password: "sharonFinch",
     email: "sharon.finch@gmail.com",
     cellphone: "0712233777",
+    address: "75 avenue de suffren 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/touch-baby_haebel.webp",
     numberOfKids: 1,
@@ -324,10 +387,13 @@ const users = [
     password: "debraMcKay",
     email: "debra.mcKay@gmail.com",
     cellphone: "0712233777",
+    address: "23 rue du commerce 75015 Paris",
+    latitude: 48.839750,
+    longitude: 2.284250,
     picture:"https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/familyandbaby_ckqbqe.webp",
     numberOfKids: 1,
     kidsAge: 06,
-    description: " ",
+    description: " Antoine is allergic to milk",
     availability: "afterSchool",
   },
   {
@@ -338,6 +404,9 @@ const users = [
     password: "evelynDeluca",
     email: "evelyn.deluca@gmail.com",
     cellphone: "0712233777",
+    address: "51 rue Emeriau 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/lowAge_u3k9rk.webp",
     numberOfKids:1,
@@ -353,6 +422,9 @@ const users = [
     password: "fayeDail",
     email: "faye.dail@gmail.com",
     cellphone: "0712233777",
+    address: "12 rue Lourmel 75015 Paris",
+    latitude: 48.839750,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/family3people2_dumhwm.jpg",
     numberOfKids: 1,
@@ -368,6 +440,9 @@ const users = [
     password: "rubyCampanella",
     email: "ruby.campanella@gmail.com",
     cellphone: "0712233777",
+    address: "76 rue Félix Faure 75015 Paris"
+    latitude: 48.839750,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/onekid_zgsail.webp",
     numberOfKids: 1,
@@ -383,6 +458,9 @@ const users = [
     password: "rebeccaLabbe",
     email: "rebecca.labbe@gmail.com",
     cellphone: "0712233777",
+    address: "87 rue balard 75015 Paris",
+    latitude: 48.839750,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/family-1littleChild_ynr56l.jpg",
     numberOfKids: 1,
@@ -398,6 +476,9 @@ const users = [
     password: "fayeDail",
     email: "faye.dail@gmail.com",
     cellphone: "0712233777",
+    address: "65 rue Letellier 75015 Paris",
+    latitude: 48.839750,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/father-baby__480_wehaap.webp",
     numberOfKids: 1,
@@ -413,6 +494,9 @@ const users = [
     password: "brettUsher",
     email: "brett.usher@gmail.com",
     cellphone: "0712233777",
+    address: "45 rue Viala 75015 Paris",
+    latitude: 48.839750,
+    longitude:2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610866/Super%20Nounou/family-3kids__480_oyko8m.jpg",
     numberOfKids: 1,
@@ -428,6 +512,9 @@ const users = [
     password: "laurenCollado",
     email: "lauren.collado@gmail.com",
     cellphone: "0712233777",
+    address: "2 rue Rouelle 75015 Paris"
+    latitude: 
+    longitude:
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610866/Super%20Nounou/boys-2_r1bzkd.webp",
     numberOfKids: 2,

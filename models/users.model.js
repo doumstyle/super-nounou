@@ -34,6 +34,13 @@ const usersSchema = new Schema({
             message: '{VALUE} is not a valid 10-digit number!'
         }*/
     },
+
+    address: String, 
+
+    latitude: Number,
+    
+    longitude: Number,
+
     picture: String,
        
     experience: Number,
