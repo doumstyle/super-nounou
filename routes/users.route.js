@@ -43,7 +43,7 @@ router.post("/create", (req, res) => {
 	Users.create(req.body)
     .then((newUser) => {
       console.log("NewUser: ", newUser);
-      res.redirect("/users");
+      res.redirect("/usersList");
     })
     .catch((e) => console.error(e));
 });
