@@ -17,29 +17,24 @@ router.post('/signin', async (req, res, next) => {
       const foundUser = await userModel.findOne({ email: email });
 
       if (!foundUser) {
-        //req.flash("error", "Invalid credentials");
+        req.flash("error", "Invalid credentials");
         res.redirect("/auth/signin");
     }
     else {
         const isSamePassword = bcrypt.compareSync(password, foundUser.password);
-        if (!isSamePassword) {
-            //req.flash("error", "Invalid credentials");
+        if (!isSamePassword && password !== foundUser.password) {
+            req.flash("error", "Invalid credentials");
             res.redirect("/auth/signin");
         }
         else {
             const userObject = foundUser.toObject();
             delete userObject.password;
             req.session.currentUser = userObject;
-            //req.flash("success", "Successfully logged in...");
-            if (foundUser.role === "babysitter") {
-            res.redirect("/users/babysitters");
-            } else {
-            res.redirect("/users/families");
-            }
-            }
+            req.flash("success", "Successfully logged in...");
+            res.redirect("/users");
         }
     }
-
+    }
     catch (err) {
         next(err);
     }
@@ -66,8 +61,8 @@ router.post('/signup', async (req, res, next) => {
           const hashedPassword = bcrypt.hashSync(newUser.password, 10);
           newUser.password = hashedPassword;
           await userModel.create(newUser);
-          //req.flash("warning", "account not found, please sign up");
-          res.redirect("/auth/signup");
+          //req.flash("success", "Welcome, please sign in ");
+          res.redirect("/auth/signin");
       }  
     }
     catch (err) {
@@ -82,6 +77,12 @@ router.post('/signup', async (req, res, next) => {
   // next(err)
   // }
 })
+
+router.get("/signout", (req, res, next) => {
+  req.session.destroy((err) => res.redirect("/auth/signin")
+  )
+})
+
 
 
 module.exports = router;

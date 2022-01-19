@@ -1,1 +1,10 @@
-<p>Flash Message</p>
+{{#if success_msg}}
+flash message
+<p class="msg success">{{success_msg}}</p>
+{{/if}}
+{{#if warning_msg}}
+<p class="msg warning">{{warning_msg}}</p>
+{{/if}}
+{{#if error_msg}}
+<p class="msg error">{{error_msg}}</p>
+{{/if}}

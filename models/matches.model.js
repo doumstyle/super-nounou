@@ -4,12 +4,12 @@ const { model, Schema } = mongoose;
 const matchesSchema = new Schema({
     babysitter: {
         type: Schema.Types.ObjectId,
-        ref: "users",
+        ref: "User",
     },
     family: {
-        type: [Schema.Types.ObjectId],
-       ref: "users"
-    },
+        type: Schema.Types.ObjectId,
+       ref: "User"
+    }
 });
 
 module.exports = model('Match', matchesSchema);

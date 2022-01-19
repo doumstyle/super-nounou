@@ -1,11 +1,10 @@
 const router = require("express").Router();
 const Users = require("./../models/users.model");
 const mongoose = require("mongoose");
-const async = require("hbs/lib/async");
 
 router.get("/", (req, res, next) => {
-  const otherRole = !req.session.currentUser.role;
-  Users.find({ role: otherRole })
+  
+  Users.find({ role:{$ne: req.session.currentUser.role}})
     .then((users) => {
       res.render("users/usersList", {
         users: users,
@@ -63,9 +62,9 @@ router.get("/:id/update", (req, res) => {
 	const id = req.params.id;
 
 	Users.findById(id)
-		.then((foundUser) => {
+		.then((user) => {
 			res.render("users/updateUser.hbs", {
-				user: foundUser,
+				user: user,
 			});
 		})
 		.catch((e) => console.error(e));
