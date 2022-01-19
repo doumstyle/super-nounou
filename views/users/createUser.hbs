@@ -1,44 +1,107 @@
-<form action="/users/create" method="POST" enctype="multipart/form-data">
+<div class="container">
+  <h2 class="mb-4">Welcome! Please create a new profile below</h2>
+  <form
+    action="/users/create"
+    method="POST"
+    enctype="multipart/form-data"
+    class="d-flex flex-column"
+  >
 
-	<label for="firstName">First name:</label>
-	<input type="text" id="firstName" name="firstName" required />
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label for="firstName">Firstname</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          class="form-control"
+        />
+      </div>
+      <div class="form-group col">
+        <label for="lastName">Lastname</label>
+        <input type="text" id="lastName" name="lastName" class="form-control" />
+      </div>
+    </div>
 
-	<label for="lastName">Last name:</label>
-	<input type="text" id="lastName" name="lastName" />
+    <div class="form-group">
+      <!-- <label for="role">Role:</label> -->
+      <input
+        type="hidden"
+        id="role"
+        name="role"
+        class="form-control disabled"
+      />
+    </div>
 
-    <label for="role">Role:</label>
-	<input type="hidden" id="role" name="role" />
+    <div class="form-row">
+      <div class="form-group col-3">
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" class="form-control" />
+      </div>
+      <div class="form-group col">
+        <label for="cellphone">Cellphone</label>
+        <input
+          type="text"
+          id="cellphone"
+          name="cellphone"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group col">
+        <label for="experience">Experience</label>
+        <input
+          type="text"
+          id="experience"
+          name="experience"
+          class="form-control"
+        />
+      </div>
+    </div>
 
-    <label for="age">Age</label>
-	<input type="text" id="age" name="age" />
+    <div class="form-group">
+      <label for="resume">Resume</label>
+      <textarea id="resume" name="resume" class="form-control"></textarea>
+    </div>
 
-	<label for="cellphone">cellphone:</label>
-	<input type="text" id="cellphone" name="cellphone" />
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label for="numberOfKids">Number of Kids</label>
+        <input
+          type="text"
+          id="numberOfKids"
+          name="numberOfKids"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group col">
+        <label for="kidsAge">Kids Age</label>
+        <input type="text" id="kidsAge" name="kidsAge" class="form-control" />
+      </div>
+    </div>
 
-	<label for="experience">experience:</label>
-	<input type="text" id="experience" name="experience"/>
-
-    <label for="resume">resume:</label>
-	<input type="textarea" id="resume" name="resume"/>
-
-    <label for="numberOfKids">Number of kids:</label>
-	<input type="text" id="numberOfKids" name="numberOfKids"/>
-
-    <label for="kidsAge">Kids age:</label>
-	<input type="text" id="kidsAge" name="kidsAge"/>
-	
-	<label for="availability">Availability: </label>
-	<select name="availability" id="availability">
-		<option value="fullTime">Full Time</option>
-		<option value="partTime">Part Time</option>
-		<option value="evening">Evening</option>
+    <div class="form-group">
+      <label for="availability">Availability</label>
+      <select name="availability" id="availability" class="form-control">
+        <option value="fullTime">Fulltime</option>
+        <option value="partTime">Part-time</option>
+        <option value="evening">Evening</option>
         <option value="afterSchool">After School</option>
-	</select>
+      </select>
+    </div>
 
-	<label for="picture">Picture:</label>
+    <div class="form-group">
+      <label for="picture">Picture</label>
+      <input
+        type="file"
+        id="picture"
+        name="picture"
+        class="form-control form-control-lg p-1"
+      />
+    </div>
 
-	<input type="text" id="picture" name="picture" />
+    <button class="btn btn-lg btn-success d-flex align-self-center">Create a
+      profile</button>
 
-	<button>Create a profile</button>
-
-</form>
+  </form>
+</div>
