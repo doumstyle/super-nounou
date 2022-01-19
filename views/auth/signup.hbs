@@ -1,26 +1,64 @@
 <div class="container">
-    <h2 class="mb-5">Welcome! Please Sign up Below</h2>
-    <form method="post" action="/auth/signup" class="d-flex flex-column mb-3">
-        <!--TODO: add here flash messag partail -->
-        <div class="form-group">
-            <label for="name">Firstname</label>
-            <input class=" form-control form-control-lg" type="text" id="name" name="firstName" value="test name">
-        </div>
-        <div class="form-group">
-            <label for="lastname">Lastname</label>
-            <input class=" form-control form-control-lg" type="text" id="lastname" name="lastName" value="test lastname">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input class=" form-control form-control-lg" type="email" id="email" name="email" value="test@email.com">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input class=" form-control form-control-lg" type="password" id="password" name="password" value="12345">
-        </div>
-        <button class="btn btn-lg btn-success d-flex align-self-center">Sign up</button>
-    </form>
-    <p class="text-center">
-        Already got an account ? <a href="/auth/signin">Sign in</a>
-    </p>
+  <h2 class="mb-5">Welcome! Please Sign up Below</h2>
+  <form method="post" action="/auth/signup" class="d-flex flex-column mb-3">
+    <!--TODO: add here flash messag partail -->
+    <div class="form-group">
+      <label for="name">Firstname</label>
+      <input
+        class="form-control form-control-lg"
+        type="text"
+        id="name"
+        name="firstName"
+        value="test name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastname">Lastname</label>
+      <input
+        class="form-control form-control-lg"
+        type="text"
+        id="lastname"
+        name="lastName"
+        value="test lastname"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        class="form-control form-control-lg"
+        type="email"
+        id="email"
+        name="email"
+        value="test@email.com"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        class="form-control form-control-lg"
+        type="password"
+        id="password"
+        name="password"
+        value="12345"
+      />
+    </div>
+    <div class="form-group">
+      <p>Choose your Role</p>
+
+      <div class="form-group">
+        <input type="radio" id="babysitter" name="role" value="Babysitter" class="form-control form-control-lg"/>
+        <label for="babysitter">Babysitter</label>
+      </div>
+
+      <div class="form-group">
+        <input type="radio" id="family" name="role" value="Family" class="form-control form-control-lg"/>
+        <label for="family">Family</label>
+      </div>
+    </div>
+    <button class="btn btn-lg btn-success d-flex align-self-center">Sign up</button>
+  </form>
+  <p class="text-center">
+    Already got an account ?
+    <a href="/auth/signin">Sign in</a>
+  </p>
 </div>
