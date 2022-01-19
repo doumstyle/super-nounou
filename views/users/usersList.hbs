@@ -1,0 +1,23 @@
+<div class="container">
+
+<h1>Users Profiles</h1>
+
+    {{> flashMessage}}
+
+	{{#each users}}
+
+		<div class="card">
+			<img src="{{this.picture}}" alt="{{this.firstName}}" />
+            <p>{{this.firstName}} {{this.lastName}}</p>
+            <p>Age: {{this.age}}</p>
+		    <p>Experiences: {{this.experience}}</p>
+            <p>Resume: {{this.resume}}</p>   
+			<a href="/users/{{this._id}}">More info...</a>
+		</div>
+        <form action="/matches/{{this._id}}" method="post">  
+            <button class="btn btn-lg button-primary">I like</button>
+        </form>
+
+	{{/each}}
+
+</div>
