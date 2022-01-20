@@ -1,11 +1,16 @@
-<h1>This is a match !</h1>
+<div class="container">
 
-<ul>The 2 matched ids 
-    <li>{{liker._id}}</li>
-    <li>{{liked._id}}</li>
-</ul>  
-
-<ul>The 2 matched profiles cellphones
-    <li>{{liker.cellphone}}</li>
-    <li>{{liked.cellphone}}</li>
-</ul>
+    <h1>This is a match !</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <p><img src="{{matched.liker.picture}}" alt="{{matched.liker.firstName}}"></p>
+            <p>{{matched.liker.firstName}} {{matched.liker.firstName}}</p>
+            <p><i class="fas fa-phone"></i>{{matched.liker.cellphone}}</p>
+        </div>
+        <div class="col-md-6">
+            <p><img src="{{matched.liked.picture}}" alt="{{matched.liked.firstName}}"></p>
+            <p>{{matched.liked.firstName}} {{matched.liked.firstName}}</p>
+            <p><i class="fas fa-phone">{{matched.liked.cellphone}}</p></i>
+        </div>
+    </div>
+</div>
