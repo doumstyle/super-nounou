@@ -1,16 +1,21 @@
 <div class="container">
-	<div class="card" style="background-color: antiquewhite;">
-		<img src="{{user.picture}}" alt="{{user.lastName}}" />
-		<p>{{user.firstName}}, {{user.lastName}}</p>
-		<p>{{user.age}}</p>
-		<p>{{user.email}}, {{user.cellphone}}</p>
-		<p>{{user.experience}}</p> 
-		<p>Or</p>
-		<p>{{user.description}}</p>
-		<p>{{user.numberOfKids}}, {{user.kidsAge}}></p>
-		<p>{{user.availability}}</p>
-       
-		<a href="/users/{{user._id}}/delete"><i class="fas fa-user-slash"></i></a>
-		<a href="/users/{{user._id}}/update"><i class="far fa-edit"></i></a>
+	<div class="card mb-5">
+		<img src={{user.picture}} alt={{user.lastName}} class="card-img-top">
+		<div class="card-body">
+			<h3 class="card-title">{{user.firstName}} {{user.lastName}} -<span class="ml-2">{{user.age}}</span></h3>
+			<p class="card-text"><i class="far fa-envelope mr-2"></i>{{user.email}}</p>
+			<p class="card-text"><i class="fas fa-mobile-alt mr-2"></i>{{user.cellphone}}</p>
+			<p class="card-text"><i class="far fa-building mr-2"></i>Experience: {{user.experience}}
+				<select name="experienceLength" id="experienceLength">
+					<option value="year(s)">year(s)</option>
+					<option value="month(s)">month(s)</option>
+				</select>
+			</p>
+			<p class="card-text">{{user.description}}</p>
+			<p class="card-text"><i class="far fa-clock mr-2"></i>Availability: {{user.availability}}</p>
+			<p class="card-text">{{user.numberOfKids}}<i class="fas fa-baby mr-4"></i>{{user.kidsAge}} years old</p>
+			<a href="/users/{{user._id}}/update"><i class="far fa-edit"></i></a>
+			<a href="/users/{{user._id}}/delete"><i class="fas fa-user-slash"></i></a>
+		</div>
 	</div>
 </div>

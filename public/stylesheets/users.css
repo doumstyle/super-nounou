@@ -1,22 +1,37 @@
-/*.container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-}*/
-
 .card {
-    background-color: antiquewhite;
-    max-width: 600px;
-    margin : 0 auto 2em auto;
-	
-	padding-bottom: 2em;
-	border-radius: 8px;
-	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
-		-2px -2px 4px rgba(255, 255, 255, 0.2);
+    width: 20rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.2rem;
 }
 
 .card img {
-	width: 100%;
+    border-bottom: 1px solid;
+}
+
+.navbar {
+    padding: 1rem 1rem;
+    opacity: .8;
+}
+  
+.navbar a {
+    font-size: 1.2rem;
+    border-radius: 2em;
+}
+
+.card-body a {
+    font-size: 1.3em;
+}
+
+.card-body a:active, a:visited{
+    color: dodgerblue;
+}
+
+.fa-heart, .fa-heart:hover {
+    color: crimson;
 }
