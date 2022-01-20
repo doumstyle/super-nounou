@@ -15,7 +15,7 @@ const users = [
     cellphone: "0612233445",
     address: "110 rue de la convention 75015 Paris",
     latitude:48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427168/84_zstpqh.jpg",
     experience: 2,
@@ -32,7 +32,7 @@ const users = [
     cellphone: "0656677889",
     address: "82 avenue Félix Faure 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427166/52_yifjrn.jpg",
     experience: 6,
@@ -49,7 +49,7 @@ const users = [
     cellphone: "0691234567",
     address:" 28 rue de vaugirard 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/62_bu6hcb.jpg",
     experience: 10,
@@ -67,7 +67,7 @@ const users = [
     cellphone: "0691234567",
     address: "18 boulevard de grenelle 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/89_gnjo3l.jpg",
     experience: 3,
@@ -84,7 +84,7 @@ const users = [
     cellphone: "0691234567",
     address: "56 avenue Emile Zola 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/79_jtjsri.jpg",
     experience: 2,
@@ -102,7 +102,7 @@ const users = [
     cellphone: "0691234567",
     address: "24 rue Sébastien Mercier 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/85_ualbng.jpg",
     experience: 5,
@@ -119,7 +119,7 @@ const users = [
     cellphone: "0691234567",
     address: "43 rue du Théâtre 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/3_bhcn52.jpg",
     experience: 10,
@@ -152,9 +152,9 @@ const users = [
     password: "PatriciaSkinner",
     email: "patricia.skinner@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
+    address: "34 rue des Totos",
+    latitude: 43.234876,
+    longitude: 2.765987,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/83_hxonua.jpg",
     experience: 10,
@@ -169,9 +169,9 @@ const users = [
     password: "shawnaWash",
     email: "shawna.Wash@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
+    address: "20 allée des Peupliers",
+    latitude: 42.454623,
+    longitude: 2.654765,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/14_spm7jb.jpg",
     experience: 11,
@@ -187,9 +187,9 @@ const users = [
     password: "JoyceOliva",
     email: "joyce.Oliva@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
+    address: "54 rue des Sentinelles",
+    latitude: 43.326787,
+    longitude: 2.657786,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504747/71_za8sjd.jpg",
     experience: 2,
@@ -204,9 +204,9 @@ const users = [
     password: "kellieMoore",
     email: "kellie.Moore@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
+    address: "78 avenue de la Liberté",
+    latitude: 45.238754,
+    longitude: 2.456765,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504726/87_mnyn3q.jpg",
     experience: 5,
@@ -222,9 +222,9 @@ const users = [
     password: "MaureenHarris",
     email: "maureenHarris@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
+    address: "65 rue des Prés",
+    latitude: 42.347998,
+    longitude: 2.875643,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504698/93_cj0uzf.jpg",
     experience: 5,
@@ -240,11 +240,10 @@ const users = [
     password: "darleneCroskey",
     email: "darleneCroskey@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1642504400/59_nqpcjj.jpg",
+    address: "27 boulevard de Nantes",
+    latitude: 44.789234,
+    longitude: 2.121267,
+    picture: "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1642504400/59_nqpcjj.jpg",
     experience: 9,
     resume:
       "Give children toys that are powered by their imagination, not by batteries.” – H. Jackson Brown",
@@ -258,9 +257,9 @@ const users = [
     password: "michelleClifford",
     email: "michelleClifford@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
+    address: "1 rue de la soif",
+    latitude: 48.435678,
+    longitude: 2.454688,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504383/91_am6jyi.jpg",
     experience: 1,
@@ -276,9 +275,9 @@ const users = [
     password: "amyPrice",
     email: "amyPrice@gmail.com",
     cellphone: "0691234567",
-    address:
-    latitude: 
-    longitude:
+    address: "34 rue de la Vache",
+    latitude: 42.764847,
+    longitude: 3.454688,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1642504295/48_disrwp.jpg",
     experience: 1,
@@ -295,9 +294,9 @@ const users = [
     password: "carolineSmith",
     email: "caroline.smith@gmail.com",
     cellphone: "0712233445",
-    address: "90 rue de la convention 75015 Paris"
+    address: "90 rue de la convention 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427161/images-4_rcjqon.jpg",
     numberOfKids: 1,
@@ -335,7 +334,7 @@ const users = [
     cellphone: "0712233777",
     address: "18 rue Violet 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/twoboys_thalau.jpg",
     numberOfKids: 1,
@@ -351,9 +350,9 @@ const users = [
     password: "lisaDunston",
     email: "lisa.dunston@gmail.com",
     cellphone: "0712233777",
-    address: "76 rue du docteur Finlay 75015 Paris"
+    address: "76 rue du docteur Finlay 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/geese-2494952__480_lcgxoy.webp",
     numberOfKids: 2,
@@ -371,7 +370,7 @@ const users = [
     cellphone: "0712233777",
     address: "75 avenue de suffren 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/touch-baby_haebel.webp",
     numberOfKids: 1,
@@ -440,7 +439,7 @@ const users = [
     password: "rubyCampanella",
     email: "ruby.campanella@gmail.com",
     cellphone: "0712233777",
-    address: "76 rue Félix Faure 75015 Paris"
+    address: "76 rue Félix Faure 75015 Paris",
     latitude: 48.839750,
     longitude: 2.284250,
     picture:
@@ -496,7 +495,7 @@ const users = [
     cellphone: "0712233777",
     address: "45 rue Viala 75015 Paris",
     latitude: 48.839750,
-    longitude:2.284250,
+    longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610866/Super%20Nounou/family-3kids__480_oyko8m.jpg",
     numberOfKids: 1,
@@ -512,9 +511,7 @@ const users = [
     password: "laurenCollado",
     email: "lauren.collado@gmail.com",
     cellphone: "0712233777",
-    address: "2 rue Rouelle 75015 Paris"
-    latitude: 
-    longitude:
+    address: "2 rue Rouelle 75015 Paris",
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610866/Super%20Nounou/boys-2_r1bzkd.webp",
     numberOfKids: 2,
