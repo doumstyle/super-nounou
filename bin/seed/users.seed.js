@@ -3,6 +3,10 @@ require("../../config/dbConfig"); // fetch the db connection
 const { SchemaTypeOptions } = require("mongoose");
 const UserModel = require("../../models/users.model.js"); // fetch the model to validate our user document before insertion (in database)
 const { getMaxListeners } = require("../../app");
+const bcrypt = require('bcrypt')
+
+const password = '1234'
+const hashedPass = bcrypt.hashSync(password, 10)
 
 const users = [
   {

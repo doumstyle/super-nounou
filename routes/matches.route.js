@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const Matches = require("../models/matches.model");
 const mongoose = require("mongoose");
+const protectRoute = require("./../middlewares/protectRoute");
+
+router.use(protectRoute);
+
 
 router.get("/", (req, res) => {
   res.render("matches/contacts");  
@@ -20,12 +24,11 @@ try {
   console.log("match >>", match);
   console.log("match type >>", typeof match);
   if (match !== null) {
-    await Matches.findById(newLike._id)
-    //.populate("User");
-    console.log("newLike.liker après populate >>", newLike.liker);
+    const matched = await Matches.findById(newLike._id)
+    .populate("liker liked");
+    console.log("newLike.liker après populate >>", matched.liked);
     res.render("matches/contacts", {
-      liker: newLike.liker,
-      liked: newLike.liked
+     matched
     });
   } else {
     res.redirect('/users');
