@@ -3,17 +3,26 @@ const Users = require("./../models/users.model");
 const mongoose = require("mongoose");
 
 router.get("/", (req, res, next) => {
-  
-  Users.find({ role:{$ne: req.session.currentUser.role}})
-    .then((users) => {
-      res.render("users/usersList", {
-        users: users,
-        css: ["users", "sign"],
-        js: ["carousel"]
-      });
-    })
-    .catch(next);
-});
+
+  const findQuery = { // find the list of !role users sorted by geospatial proximity
+   role:{ $ne: req.session.currentUser.role,
+    coordinates: {
+     $near: {
+      $geometry: { type: "Point", coordinates: req.session.currentUser.coordinates }
+     }
+    }
+   }}
+ 
+   Users.find(findQuery)
+     .then((users) => {
+       res.render("users/usersList", {
+         users: users,
+         css: ["users", "sign"],
+       });
+     })
+     .catch(next);
+ });
+ 
 
 router.get("/:id", (req, res, next) => {
   console.log(req.params);

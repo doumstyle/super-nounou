@@ -5,6 +5,55 @@ const UserModel = require("../../models/users.model.js"); // fetch the model to 
 const { getMaxListeners } = require("../../app");
 
 const users = [
+ {
+  firstName: "Ruby",
+  lastName: "Campanella",
+  role: "family",
+  age: 34,
+  password: "rubyCampanella",
+  email: "ruby.campanella@gmail.com",
+  cellphone: "0712233777",
+  address: "76 rue Félix Faure 75015 Paris",
+  coordinates: [48.839750, 2.284250],
+  picture:
+   "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/onekid_zgsail.webp",
+  numberOfKids: 1,
+  kidsAge: 2,
+  description: "Louise is very calm listening music ",
+  availability: "fullTime",
+ },
+ {
+  firstName: "Rebecca",
+  lastName: "Labbe",
+  role: "family",
+  age: 34,
+  password: "rebeccaLabbe",
+  email: "rebecca.labbe@gmail.com",
+  cellphone: "0712233777",
+  address: "22 rue Paul Doumer Beauvais",
+  coordinates: [49.448089, 2.08002],
+  picture:
+   "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/family-1littleChild_ynr56l.jpg",
+  numberOfKids: 1,
+  kidsAge: 2,
+  description: "Mateo love walking and playing in the parc ",
+  availability: "fullTime",
+ },
+ {
+  firstName: "Luce",
+  lastName: "Broyez",
+  role: "babysitter",
+  age: 75,
+  password: "luce.broyez",
+  email: "luce.broyez@gmail.com",
+  cellphone: "0343273375",
+  address: "43 avenue du Docteur Schweitzer 59282 Douchy-les-mines",
+  coordinates: [49.79675, 3.134536],
+  picture:
+   "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/family-1littleChild_ynr56l.jpg",
+  description: "Mateo love walking and playing in the parc ",
+  availability: "fullTime",
+ },
   {
     firstName: "Lynda ",
     lastName: "Dupond",
@@ -14,10 +63,8 @@ const users = [
     email: "lynda.dupond@gmail.com",
     cellphone: "0612233445",
     address: "110 rue de la convention 75015 Paris",
-    latitude:48.839750,
-    longitude: 2.284250,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427168/84_zstpqh.jpg",
+    coordinates: [48.858705, 2.342865],
+    picture: "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427168/84_zstpqh.jpg",
     experience: 2,
     resume: "I love children, i used to take care of my brothers and sisters",
     availability: "afterSchool",
@@ -31,10 +78,8 @@ const users = [
     email: "sophie.durand@gmail.com",
     cellphone: "0656677889",
     address: "82 avenue Félix Faure 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427166/52_yifjrn.jpg",
+  coordinates: [48.839751, 2.284263],
+    picture: "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427166/52_yifjrn.jpg",
     experience: 6,
     resume: "I am a mum of 3 kids, i consider all children as my own children",
     availability: "fullTime",
@@ -47,9 +92,8 @@ const users = [
     password: "marienoelFrance",
     email: "marienoel.france@gmail.com",
     cellphone: "0691234567",
-    address:" 28 rue de vaugirard 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+    address: "28 rue de vaugirard 75015 Paris",
+  coordinates: [ 48.849376, 2.336508],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/62_bu6hcb.jpg",
     experience: 10,
@@ -66,8 +110,7 @@ const users = [
     email: "jeanetteMoss@gmail.com",
     cellphone: "0691234567",
     address: "18 boulevard de grenelle 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+    coordinates: [48.853185, 2.289709],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/89_gnjo3l.jpg",
     experience: 3,
@@ -83,31 +126,13 @@ const users = [
     email: "amanda.halliday@gmail.com",
     cellphone: "0691234567",
     address: "56 avenue Emile Zola 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coodinates: [48.846334,2.283672],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/79_jtjsri.jpg",
     experience: 2,
     resume:
       "Since 2 i am taking care of 2 chidren for helping them homework, i am studing beside",
     availability: "afterSchool",
-  },
-  {
-    firstName: "Mary ",
-    lastName: "Saulsbury",
-    role: "babysitter",
-    age: 28,
-    password: "marySaulsbury",
-    email: "mary.Saulsbury@gmail.com",
-    cellphone: "0691234567",
-    address: "24 rue Sébastien Mercier 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/85_ualbng.jpg",
-    experience: 5,
-    resume: "Let me love you a little more before your not little anymore.",
-    availability: "partTime",
   },
   {
     firstName: "Anna",
@@ -118,8 +143,7 @@ const users = [
     email: "anna.Brown@gmail.com",
     cellphone: "0691234567",
     address: "43 rue du Théâtre 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.848828, 2.288463],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/3_bhcn52.jpg",
     experience: 10,
@@ -135,8 +159,7 @@ const users = [
     email: "rosemary.Chapman@gmail.com",
     cellphone: "0691234567",
     address: "8 rue Tiphaine 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.84916, 2.295193],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/86_evzxio.jpg",
     experience: 25,
@@ -144,148 +167,6 @@ const users = [
       "The greatest gift I can give to your children is my time, my love, and my attention.",
     availability: "fullTime",
   },
-  {
-    firstName: "Patricia",
-    lastName: "Skinner",
-    role: "babysitter",
-    age: 37,
-    password: "PatriciaSkinner",
-    email: "patricia.skinner@gmail.com",
-    cellphone: "0691234567",
-    address: "34 rue des Totos",
-    latitude: 43.234876,
-    longitude: 2.765987,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/83_hxonua.jpg",
-    experience: 10,
-    resume: "The best thing in the world is seeing smiling face on your kids.",
-    availability: "fullTime",
-  },
-  {
-    firstName: "Shawna",
-    lastName: "Wash",
-    role: "babysitter",
-    age: 49,
-    password: "shawnaWash",
-    email: "shawna.Wash@gmail.com",
-    cellphone: "0691234567",
-    address: "20 allée des Peupliers",
-    latitude: 42.454623,
-    longitude: 2.654765,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/14_spm7jb.jpg",
-    experience: 11,
-    resume:
-      "Children need at least one person in their life that thinks the sun rises and sets on them, who delights in their existence, and loves them unconditionally",
-    availability: "fullTime",
-  },
-  {
-    firstName: "Joyce",
-    lastName: "Oliva",
-    role: "babysitter",
-    age: 21,
-    password: "JoyceOliva",
-    email: "joyce.Oliva@gmail.com",
-    cellphone: "0691234567",
-    address: "54 rue des Sentinelles",
-    latitude: 43.326787,
-    longitude: 2.657786,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504747/71_za8sjd.jpg",
-    experience: 2,
-    resume: "A child is an uncut diamond.” – Austin O’Malley",
-    availability: "afterSchool",
-  },
-  {
-    firstName: "Kellie",
-    lastName: "Moore",
-    role: "babysitter",
-    age: 20,
-    password: "kellieMoore",
-    email: "kellie.Moore@gmail.com",
-    cellphone: "0691234567",
-    address: "78 avenue de la Liberté",
-    latitude: 45.238754,
-    longitude: 2.456765,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504726/87_mnyn3q.jpg",
-    experience: 5,
-    resume:
-      "Children aren’t coloring books. You don’t get to fill them with your favorite colors.",
-    availability: "afterSchool",
-  },
-  {
-    firstName: "Maureen",
-    lastName: "Harris",
-    role: "babysitter",
-    age: 20,
-    password: "MaureenHarris",
-    email: "maureenHarris@gmail.com",
-    cellphone: "0691234567",
-    address: "65 rue des Prés",
-    latitude: 42.347998,
-    longitude: 2.875643,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504698/93_cj0uzf.jpg",
-    experience: 5,
-    resume:
-      "Play gives children a chance to practice what they are learning.” – Mr. Rogers",
-    availability: "afterSchool",
-  },
-  {
-    firstName: "Darlene",
-    lastName: "Croskey",
-    role: "babysitter",
-    age: 30,
-    password: "darleneCroskey",
-    email: "darleneCroskey@gmail.com",
-    cellphone: "0691234567",
-    address: "27 boulevard de Nantes",
-    latitude: 44.789234,
-    longitude: 2.121267,
-    picture: "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1642504400/59_nqpcjj.jpg",
-    experience: 9,
-    resume:
-      "Give children toys that are powered by their imagination, not by batteries.” – H. Jackson Brown",
-    availability: "partTime",
-  },
-  {
-    firstName: "Michelle",
-    lastName: "Clifford",
-    role: "babysitter",
-    age: 18,
-    password: "michelleClifford",
-    email: "michelleClifford@gmail.com",
-    cellphone: "0691234567",
-    address: "1 rue de la soif",
-    latitude: 48.435678,
-    longitude: 2.454688,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642504383/91_am6jyi.jpg",
-    experience: 1,
-    resume:
-      "Give children toys that are powered by their imagination, not by batteries.” – H. Jackson Brown",
-    availability: "evening",
-  },
-  {
-    firstName: "Amy",
-    lastName: "Price",
-    role: "babysitter",
-    age: 18,
-    password: "amyPrice",
-    email: "amyPrice@gmail.com",
-    cellphone: "0691234567",
-    address: "34 rue de la Vache",
-    latitude: 42.764847,
-    longitude: 3.454688,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1642504295/48_disrwp.jpg",
-    experience: 1,
-    resume:
-      "Children are the true connoisseurs, what’s precious to them has no price, only value.” – Bel Kaufman",
-    availability: "evening",
-  },
-
   {
     firstName: "Caroline",
     lastName: "Smith",
@@ -295,8 +176,8 @@ const users = [
     email: "caroline.smith@gmail.com",
     cellphone: "0712233445",
     address: "90 rue de la convention 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.841868,
+   2.285956],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427161/images-4_rcjqon.jpg",
     numberOfKids: 1,
@@ -314,8 +195,8 @@ const users = [
     email: "sarah.robert@gmail.com",
     cellphone: "07122334454",
     address: "65 boulevard grenelle 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.850721,
+   2.293386],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610871/Super%20Nounou/twokids_lel338.jpg",
     numberOfKids: 2,
@@ -333,8 +214,7 @@ const users = [
     email: "jennifer.stone@gmail.com",
     cellphone: "0712233777",
     address: "18 rue Violet 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+    coordinates: [48.848799, 2.293983],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/twoboys_thalau.jpg",
     numberOfKids: 1,
@@ -351,8 +231,8 @@ const users = [
     email: "lisa.dunston@gmail.com",
     cellphone: "0712233777",
     address: "76 rue du docteur Finlay 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.858705,
+   2.342865],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/geese-2494952__480_lcgxoy.webp",
     numberOfKids: 2,
@@ -369,8 +249,8 @@ const users = [
     email: "sharon.finch@gmail.com",
     cellphone: "0712233777",
     address: "75 avenue de suffren 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.858705,
+   2.342865],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/touch-baby_haebel.webp",
     numberOfKids: 1,
@@ -387,12 +267,11 @@ const users = [
     email: "debra.mcKay@gmail.com",
     cellphone: "0712233777",
     address: "23 rue du commerce 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.847992, 2.296839],
     picture:"https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/familyandbaby_ckqbqe.webp",
     numberOfKids: 1,
     kidsAge: [6],
-    description: " Antoine is allergic to milk",
+    description: "Antoine is allergic to milk",
     availability: "afterSchool",
   },
   {
@@ -404,8 +283,8 @@ const users = [
     email: "evelyn.deluca@gmail.com",
     cellphone: "0712233777",
     address: "51 rue Emeriau 75015 Paris",
-    latitude: 48.839750,
-    longitude:2.284250,
+  coordinates: [48.848561,
+   2.285232],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/lowAge_u3k9rk.webp",
     numberOfKids:1,
@@ -422,49 +301,13 @@ const users = [
     email: "faye.dail@gmail.com",
     cellphone: "0712233777",
     address: "12 rue Lourmel 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.850041,
+   2.291719],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/family3people2_dumhwm.jpg",
     numberOfKids: 2,
     kidsAge: [1, 3],
     description: "Arthur is a lovely baby who sleep all the time",
-    availability: "fullTime",
-  },
-  {
-    firstName: "Ruby",
-    lastName: "Campanella",
-    role: "family",
-    age: 34,
-    password: "rubyCampanella",
-    email: "ruby.campanella@gmail.com",
-    cellphone: "0712233777",
-    address: "76 rue Félix Faure 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/onekid_zgsail.webp",
-    numberOfKids: 1,
-    kidsAge: 2,
-    description: "Louise is very calm listening music ",
-    availability: "fullTime",
-  },
-  {
-    firstName: "Rebecca",
-    lastName: "Labbe",
-    role: "family",
-    age: 34,
-    password: "rebeccaLabbe",
-    email: "rebecca.labbe@gmail.com",
-    cellphone: "0712233777",
-    address: "87 rue balard 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/family-1littleChild_ynr56l.jpg",
-    numberOfKids: 1,
-    kidsAge: 2,
-    description: "Mateo love walking and playing in the parc ",
     availability: "fullTime",
   },
   {
@@ -476,12 +319,12 @@ const users = [
     email: "olivia.dail@gmail.com",
     cellphone: "0712233777",
     address: "65 rue Letellier 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.846823,
+   2.299283],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/father-baby__480_wehaap.webp",
     numberOfKids: 1,
-    kidsAge: 03,
+    kidsAge: 3,
     description: "Mateo love walking and playing in the parc ",
     availability: "fullTime",
   },
@@ -494,33 +337,49 @@ const users = [
     email: "brett.usher@gmail.com",
     cellphone: "0712233777",
     address: "45 rue Viala 75015 Paris",
-    latitude: 48.839750,
-    longitude: 2.284250,
+  coordinates: [48.858705,
+   2.342865],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610866/Super%20Nounou/family-3kids__480_oyko8m.jpg",
     numberOfKids: 1,
-    kidsAge: 03,
-    description: "Mateo love walking and playing in the parc ",
-    availability: "fullTime",
-  },
-  {
-    firstName: "Lauren",
-    lastName: "Collado",
-    role: "family",
-    age: 34,
-    password: "laurenCollado",
-    email: "lauren.collado@gmail.com",
-    cellphone: "0712233777",
-    address: "2 rue Rouelle 75015 Paris",
-    picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610866/Super%20Nounou/boys-2_r1bzkd.webp",
-    numberOfKids: 2,
-    kidsAge: 5,
+    kidsAge: 3,
     description: "Mateo love walking and playing in the parc ",
     availability: "fullTime",
   }
-  
 ];
+
+
+/*
+(async function findUsersByProximity () {
+ try {
+
+  // const sortedUsers = await UserModel.find({
+  //   "coordinates": {
+  //    $near: {
+  //     $geometry: { type: "Point", coordinates: [51.091074, 3.707589] } // from Ghent (Belgium)
+  //    }
+  //   }
+  // })
+
+  const sortedUsers = await UserModel.find({
+   "coordinates": {
+    $near: {
+     $geometry: { type: "Point", coordinates: [47.410714, 0.666035] } // from 'Saint-Cyr-sur-Loire'
+    }
+   }
+  })
+
+  console.log(
+   `sortedUsers:`, sortedUsers
+  );
+  process.exit();
+
+ } catch (err) {
+  console.error(err);
+ }
+})();
+*/
+
 
 (async function insertUsers() {
   try {
