@@ -44,7 +44,7 @@ const users = [
   lastName: "Broyez",
   role: "babysitter",
   age: 75,
-  password: "luce.broyez",
+  password: "luceBroyez",
   email: "luce.broyez@gmail.com",
   cellphone: "0343273375",
   address: "43 avenue du Docteur Schweitzer 59282 Douchy-les-mines",
