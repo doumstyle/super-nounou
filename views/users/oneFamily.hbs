@@ -1,0 +1,9 @@
+<div class="container">
+	<div class="card" style="background-color: antiquewhite;">
+		<img src="{{family.picture}}" alt="{{family.lastName}}" />
+		<p>Name: {{family.firstName}} {{family.lastName}}</p>
+		<p>Age: {{family.age}} </p>       
+		<a href="/users/{{family._id}}/delete"><i class="fas fa-family-slash"></i></a>
+		<a href="/users/{{family._id}}/update"><i class="far fa-edit"></i></a>
+	</div>
+</div>

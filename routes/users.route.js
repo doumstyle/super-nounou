@@ -5,14 +5,6 @@ const protecRoute = require("./../middlewares/protectRoute");
 
 router.use(protecRoute);
 
-router.get("/babysitters", (req, res, next) => {
-  res.render("users/babysittersList");
-});
-
-router.get("/families", (req, res, next) => {
-  res.render("users/familiesList");
-});
-
 router.get("/", (req, res, next) => {
   //const role = req.session.currentUser.role; //babysitter
   let userType = ""; //babysitter or family
@@ -40,13 +32,18 @@ router.get("/:id([a-f0-9]{24})", (req, res, next) => {
   const id = req.params.id;
   Users.findById(id)
     .then(user => {
-      console.log(user);
-
-      res.render("users/oneUser.hbs", {
-        user: user,
+	if (req.session.currentUser.role === "babysitter") {
+      res.render("users/oneBabysitter.hbs", {
+        babysitter: user,
         css: ["users"]
       });
-    })
+	} else if (req.session.currentUser.role === "family") {
+		res.render("users/oneFamily.hbs", {
+			family: user,
+			css: ["users"]
+		  });
+		}
+	})
     .catch(next);
 });
 
@@ -84,9 +81,15 @@ router.get("/:id/update", (req, res, next) => {
 
   Users.findById(id)
     .then(user => {
-      res.render("users/updateUser.hbs", {
-        user: user
-      });
+	if (req.session.currentUser.role === "babysitter") {	
+      res.render("users/updateBabysitter.hbs", {
+        babysitter: user
+	  });
+	} else if (req.session.currentUser.role === "family") {
+		res.render("users/updateFamily.hbs", {
+			family: user
+		  });
+		}
     })
     .catch(next);
 });

@@ -1,28 +1,28 @@
-<form action="/users/{{user._id}}/update" method="POST" enctype="multipart/form-data">
+<form action="/users/{{family._id}}/update" method="POST" enctype="multipart/form-data">
 
 	<label for="firstName">First name:</label>
-	<input type="text" id="firstName" name="firstName" required value={{user.firstName}}/>
+	<input type="text" id="firstName" name="firstName" required value={{family.firstName}}/>
 
 	<label for="lastName">Last name:</label>
-	<input type="text" id="lastName" name="lastName" value={{user.lastName}}/>
+	<input type="text" id="lastName" name="lastName" value={{family.lastName}}/>
     
     <label for="age">Age</label>
-	<input type="number" id="age" name="age" value={{user.age}} />
+	<input type="number" id="age" name="age" value={{family.age}} />
 
 	<label for="cellphone">cellphone:</label>
-	<input type="number" id="cellphone" name="cellphone" value={{user.cellphone}} />
+	<input type="number" id="cellphone" name="cellphone" value={{family.cellphone}} />
 
 	<label for="experience">experience:</label>
-	<input type="number" id="experience" name="experience"value={{user.experience}}/>
+	<input type="number" id="experience" name="experience"value={{family.experience}}/>
 
     <label for="resume">resume:</label>
-	<input type="text" id="resume" name="resume"value={{user.resume}}/>
+	<input type="text" id="resume" name="resume"value={{family.resume}}/>
 
     <label for="numberOfKids">Number of kids:</label>
-	<input type="number" id="numberOfKids" name="numberOfKids"value={{user.numberOfKids}} />
+	<input type="number" id="numberOfKids" name="numberOfKids"value={{family.numberOfKids}} />
 
     <label for="kidsAge">Kids age:</label>
-	<input type="number" id="kidsAge" name="kidsAge" value={{user.kidsAge}}/>
+	<input type="number" id="kidsAge" name="kidsAge" value={{family.kidsAge}}/>
 	
 	<label for="availability">Availability: </label>
 	<select name="availability" id="availability">

@@ -1,0 +1,41 @@
+<form action="/users/{{babysitter._id}}/update" method="POST" enctype="multipart/form-data">
+
+	<label for="firstName">First name:</label>
+	<input type="text" id="firstName" name="firstName" required value={{babysitter.firstName}}/>
+
+	<label for="lastName">Last name:</label>
+	<input type="text" id="lastName" name="lastName" value={{babysitter.lastName}}/>
+    
+    <label for="age">Age</label>
+	<input type="number" id="age" name="age" value={{babysitter.age}} />
+
+	<label for="cellphone">cellphone:</label>
+	<input type="number" id="cellphone" name="cellphone" value={{babysitter.cellphone}} />
+
+	<label for="experience">experience:</label>
+	<input type="number" id="experience" name="experience"value={{babysitter.experience}}/>
+
+    <label for="resume">resume:</label>
+	<input type="text" id="resume" name="resume"value={{babysitter.resume}}/>
+
+    <label for="numberOfKids">Number of kids:</label>
+	<input type="number" id="numberOfKids" name="numberOfKids"value={{babysitter.numberOfKids}} />
+
+    <label for="kidsAge">Kids age:</label>
+	<input type="number" id="kidsAge" name="kidsAge" value={{babysitter.kidsAge}}/>
+	
+	<label for="availability">Availability: </label>
+	<select name="availability" id="availability">
+		<option value="fullTime">Full Time</option>
+		<option value="partTime">Part Time</option>
+		<option value="evening">Evening</option>
+        <option value="afterSchool">After School</option>
+	</select>
+
+	<label for="picture">Picture:</label>
+
+	<input type="file" id="picture" name="picture" />
+
+	<button>Update your profile</button>
+
+</form>
