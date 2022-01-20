@@ -25,19 +25,18 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/:id([a-f0-9]{24})", (req, res, next) => {
-  console.log(req.params);
   const id = req.params.id;
   Users.findById(id)
     .then(user => {
       if (req.session.currentUser.role === "babysitter") {
-        res.render("users/oneBabysitter.hbs", {
-          babysitter: user,
+        res.render("users/oneFamily.hbs", {
+          family: user,
           css: ["oneFamily"]
         });
       } else if (req.session.currentUser.role === "family") {
-        res.render("users/oneFamily.hbs", {
-          family: user,
-          css: ["oneBabysitter"]
+        res.render("users/oneBabysitter.hbs", {
+          babysitter: user,
+          css: ["oneFamily"]
         });
       }
     })
@@ -81,12 +80,12 @@ router.get("/:id/update", (req, res, next) => {
   Users.findById(id)
     .then(user => {
       if (req.session.currentUser.role === "babysitter") {
-        res.render("users/updateBabysitter.hbs", {
-          babysitter: user
-        });
-      } else if (req.session.currentUser.role === "family") {
         res.render("users/updateFamily.hbs", {
           family: user
+        });
+      } else if (req.session.currentUser.role === "family") {
+        res.render("users/updateBabysitter.hbs", {
+          babysitter: user
         });
       }
     })

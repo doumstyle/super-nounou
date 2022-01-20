@@ -1,9 +1,14 @@
-<div class="container">
-	<div class="card" style="background-color: antiquewhite;">
-		<img src="{{babysitter.picture}}" alt="{{babysitter.lastName}}" />
-		<p>Name: {{babysitter.firstName}} {{babysitter.lastName}}</p>
-		<p>Age: {{babysitter.age}}</p>       
-		<a href="/users/{{babysitter._id}}/delete"><i class="fas fa-babysitter-slash"></i></a>
-		<a href="/users/{{babysitter._id}}/update"><i class="far fa-edit"></i></a>
+<div class="container d-flex justify-content-center ml-auto">
+	<div class="card mb-3">
+		<img src="{{babysitter.picture}}" alt="babysitter.lastName" class="card-img-top">
+		<div class="card-body">
+			<h5 class="card-title">{{babysitter.firstName}} {{babysitter.lastName}}</h5>
+			<p class="card-text">{{babysitter.address}}</p>
+			<p class="card-text"><i class="fas fa-mobile-alt mr-2"></i>{{babysitter.cellphone}}</p>
+			<p class="card-text">{{babysitter.resume}}</p>
+			<p class="card-text">Available: {{babysitter.availability}}</p>
+			<a href="/users/{{babysitter._id}}/update" class="fas fa-edit"></a>
+			<a href="/users/{{babysitter._id}}/delete" class="fas fa-user-slash"></a>
+		</div>
 	</div>
 </div>

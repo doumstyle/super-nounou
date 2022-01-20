@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container d-flex justify-content-center ml-auto">
 	<div class="card mb-3">
 		<img src="{{family.picture}}" alt="family.lastName" class="card-img-top">
 		<div class="card-body">
 			<h5 class="card-title">{{family.firstName}} {{family.lastName}}</h5>
 			<p class="card-text">{{family.address}}</p>
-			<p class="card-text">{{family.cellphone}}</p>
-			<p class="card-text">{{family.numberOfKids}}</p>
-			<p class="card-text">{{family.kidsAge}}</p>
+			<p class="card-text"><i class="fas fa-mobile-alt mr-2"></i>{{family.cellphone}}</p>
+			<p class="card-text">{{family.numberOfKids}} kid(s)</p>
+			<p class="card-text">{{family.kidsAge}} years old</p>
 			<p class="card-text">{{family.description}}</p>
-			<p class="card-text">{{family.availability}}</p>
+			<p class="card-text">Available: {{family.availability}}</p>
 			<a href="/users/{{family._id}}/update" class="fas fa-edit"></a>
-			<a href="/users/{{family._id}}/delete" class="fas fa-family-slash"></a>
+			<a href="/users/{{family._id}}/delete" class="fas fa-user-slash"></a>
 		</div>
 	</div>
 </div>
