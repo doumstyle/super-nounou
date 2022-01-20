@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>Families Profiles</h1>
+	{{> flashMessage}}
+</div>
+<div class="container d-flex flex-wrap justify-content-between">
+	{{#each families}}
+	<div class="card mb-5">
+		<img src="{{this.picture}}" alt="{{this.firstName}}" />
+		<div class="card-body">
+			<h5 class="card-title">{{this.firstName}} {{this.lastName}}</h5>
+			<p class="card-text">Description: {{this.description}}</p>
+			<p class="card-text">Number of Kids : {{this.numberOfKids}}</pc>
+			<p class="card-text">Kids Age : {{this.kidsAge}}</p>
+			<a href="/users/{{this._id}}">More info...</a>
+		</div>
+	</div>
+</div>
+		
