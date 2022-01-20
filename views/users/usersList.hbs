@@ -1,29 +1,19 @@
 <div class="container">
-
-<h1>Users Profiles</h1>
-
-    {{> flashMessage}}
-
-	{{!-- {{#each users}}
-
-		<div class="card">
-			<img src="{{this.picture}}" alt="{{this.firstName}}" />
-            <p>{{this.firstName}} {{this.lastName}}</p>
-            <p>Age: {{this.age}}</p>
-		    <p>Experiences: {{this.experience}}</p>
-            <p>Resume: {{this.resume}}</p>   
-			<a href="/users/{{this._id}}">More info...</a>
+	<h1>Users Profiles</h1>
+	{{> flashMessage}}
+</div>
+<div class="container d-flex flex-wrap justify-content-between">
+	{{#each users}}			
+		<div class="card mb-5">
+				<img src="{{this.picture}}" alt="{{this.firstName}}" />
+				<div class="card-body">
+						<h5 class="card-title">{{this.firstName}} {{this.lastName}} <span class="ml-3">{{this.age}}</span></h5>					
+						<p class="card-text">Experiences: {{this.experience}}</p>
+						<p>{{this.resume}}</p>   
+						<a href="/users/{{this._id}}">More info...</a>
+						<a href="/matches/{{this._id}}" class="fas fa-heart 5x"></a>
+				</div>
 		</div>
-        <form action="/matches/{{this._id}}" method="post">  
-            <button class="btn btn-lg button-primary">I like</button>
-        </form>
 
-	{{/each}} --}}
-
-<!-- Carrousel -->
-<div id="carousel">
-      <button id="btn-prev" class="btn">prev</button>
-      <button id="btn-next" class="btn">next</button>
-      <img class="img" src="https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427168/84_zstpqh.jpg" alt="nice">
-    </div>
+	{{/each}}
 </div>

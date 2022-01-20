@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', {
      title: 'Super Nounou',
      image: 'background',
-     css: ['style']
+     css: ['style', 'sign']
     });
 });
 

@@ -8,7 +8,7 @@ router.get("/", (req, res, next) => {
     .then((users) => {
       res.render("users/usersList", {
         users: users,
-        css: ["users"],
+        css: ["users", "sign"],
         js: ["carousel"]
       });
     })
@@ -26,7 +26,7 @@ router.get("/:id", (req, res, next) => {
 
         res.render("users/oneUser.hbs", {
           user: user,
-          css: ["users"],
+          css: ["oneUser"],
         });
       })
       .catch((e) => console.error(e));

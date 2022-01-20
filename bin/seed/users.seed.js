@@ -250,7 +250,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427161/images-4_rcjqon.jpg",
     numberOfKids: 1,
-    kidsAge: 5,
+    kidsAge: [5],
     description:
       "Pierre is full of energy, he likes reading and playing football",
     availability: "afterSchool",
@@ -266,7 +266,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427163/images-8_ryvlkl.jpg",
     numberOfKids: 2,
-    kidsAge: 5,
+    kidsAge: [5, 7],
     description:
       "Clara and Peter loves playing together. Clara play piano and Peter play tennis",
     availability: "afterSchool",
@@ -282,7 +282,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/images-1_gvcrwy.jpg",
     numberOfKids: 1,
-    kidsAge: 1,
+    kidsAge: [1],
     description: "Arthur is a lovely baby who sleep all the time",
     availability: "fullTime",
   },
@@ -297,7 +297,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427161/images-7_yfvljo.jpg",
     numberOfKids: 2,
-    kidsAge: 7,
+    kidsAge: [7, 4],
     description: "",
     availability: "afterSchool",
   },
@@ -312,7 +312,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1642427161/images-5_tie3dm.jpg",
     numberOfKids: 2,
-    kidsAge: 9,
+    kidsAge: [9, 12],
     description: "Arthur is a lovely baby who sleep all the time",
     availability: "evening",
   },
@@ -327,7 +327,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1642427163/images_pytpca.jpg",
     numberOfKids: 3,
-    kidsAge: 10,
+    kidsAge: [10, 13, 8],
     description: "Arthur is a lovely baby who sleep all the time",
     availability: "afterSchool",
   },
@@ -342,7 +342,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1642427164/images-2_x3coht.jpg",
     numberOfKids: 3,
-    kidsAge: 1,
+    kidsAge: [1, 5, 7],
     description: "Arthur is a lovely baby who sleep all the time",
     availability: "fullTime",
   },
@@ -357,7 +357,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1642427164/images-3_rkvcoc.jpg",
     numberOfKids: 2,
-    kidsAge: 1,
+    kidsAge: [1, 3],
     description: "Arthur is a lovely baby who sleep all the time",
     availability: "fullTime",
   }
