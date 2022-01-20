@@ -35,7 +35,9 @@ router.get("/:id", (req, res, next) => {
 });
 
 router.get("/create", (req, res, next) => {
-  res.render("users/createUser.hbs");
+  res.render("users/createUser.hbs", {
+    css: ["create"]
+  });
 });
 
 router.post("/create", (req, res) => {
