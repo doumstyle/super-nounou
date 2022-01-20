@@ -21,8 +21,8 @@ router.get("/", (req, res, next) => {
           babysitters: users,
           css: ["users", "sign"]
         });
-	  }
-	  else return  res.send("wrong user role !")
+      }
+      else return res.send("wrong user role !")
     })
     .catch(next);
 });
@@ -32,14 +32,19 @@ router.get("/:id([a-f0-9]{24})", (req, res, next) => {
   const id = req.params.id;
   Users.findById(id)
     .then(user => {
-      console.log(user);
-
-        res.render("users/oneUser.hbs", {
-          user: user,
-          css: ["oneUser"],
+      if (req.session.currentUser.role === "babysitter") {
+        res.render("users/oneBabysitter.hbs", {
+          babysitter: user,
+          css: ["users"]
         });
-      })
-      .catch(next);
+      } else if (req.session.currentUser.role === "family") {
+        res.render("users/oneFamily.hbs", {
+          family: user,
+          css: ["users"]
+        });
+      }
+    })
+    .catch(next);
 });
 
 router.get("/create", (req, res, next) => {
@@ -78,9 +83,15 @@ router.get("/:id/update", (req, res, next) => {
 
   Users.findById(id)
     .then(user => {
-      res.render("users/updateUser.hbs", {
-        user: user
-      });
+      if (req.session.currentUser.role === "babysitter") {
+        res.render("users/updateBabysitter.hbs", {
+          babysitter: user
+        });
+      } else if (req.session.currentUser.role === "family") {
+        res.render("users/updateFamily.hbs", {
+          family: user
+        });
+      }
     })
     .catch(next);
 });
