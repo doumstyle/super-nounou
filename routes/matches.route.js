@@ -6,9 +6,9 @@ const protectRoute = require("./../middlewares/protectRoute");
 router.use(protectRoute);
 
 
-router.get("/", (req, res) => {
+/*router.get("/", (req, res) => {
   res.render("matches/contacts");  
-});
+});*/
 
 
 
