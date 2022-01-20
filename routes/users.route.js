@@ -5,14 +5,6 @@ const protecRoute = require("./../middlewares/protectRoute");
 
 router.use(protecRoute);
 
-router.get("/babysitters", (req, res, next) => {
-  res.render("users/babysittersList");
-});
-
-router.get("/families", (req, res, next) => {
-  res.render("users/familiesList");
-});
-
 router.get("/", (req, res, next) => {
   //const role = req.session.currentUser.role; //babysitter
   let userType = ""; //babysitter or family
@@ -22,12 +14,12 @@ router.get("/", (req, res, next) => {
       if (req.session.currentUser.role === "babysitter") {
         res.render("users/familiesList", {
           families: users,
-          css: ["users"]
+          css: ["users", "sign"]
         });
       } else if (req.session.currentUser.role === "family") {
         res.render("users/babysittersList", {
           babysitters: users,
-          css: ["users"]
+          css: ["users", "sign"]
         });
 	  }
 	  else return  res.send("wrong user role !")

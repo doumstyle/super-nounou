@@ -1,5 +1,14 @@
+.row {
+    display: block;
+}
+
+.card {
+    flex-direction: row;
+}
+
 .card img {
-    height: 25rem;
+    width: 26rem;
+    border-right: 1px solid;
 }
 
 .card-title {

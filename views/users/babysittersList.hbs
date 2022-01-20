@@ -1,22 +1,20 @@
 <div class="container">
 
-<h1>Babysitters Profiles</h1>
+	<h1>Babysitters Profiles</h1>
 
-    {{> flashMessage}}
-
+	{{> flashMessage}}
+</div>
+<div class="container d-flex flex-wrap justify-content-between">
 	{{#each babysitters}}
-
-		<div class="card">
-			<img src="{{this.picture}}" alt="{{this.firstName}}" />
-            <p>{{this.firstName}} {{this.lastName}}</p>                    
-		    <p>Experiences: {{this.experience}}</p>            
-            <p>Resume: {{this.resume}}</p>  
+	<div class="card mb-5">
+		<img src="{{this.picture}}" alt="{{this.firstName}}" />
+		<div class="card-body">
+			<p class="card-title">{{this.firstName}} {{this.lastName}}</p>
+			<p class="card-text"><i class="fas fa-briefcase mr-2"></i>Experiences: {{this.experience}} years</p>
+			<p class="card-text"><i class="far fa-file mr-2"></i>Resume: {{this.resume}}</p>
 			<a href="/users/{{this._id}}">More info...</a>
+			<a href="/matches/{{this._id}}" class="fas fa-heart ml-2"></a>
 		</div>
-        <form action="/matches/{{this._id}}" method="post">  
-            <button class="btn btn-lg button-primary">I like</button>
-        </form>
-
+	</div>
 	{{/each}}
-
 </div>
