@@ -22,7 +22,7 @@ router.post('/signin', async (req, res, next) => {
     }
     else {
         const isSamePassword = bcrypt.compareSync(password, foundUser.password);
-        if (!isSamePassword && password !== foundUser.password) {
+           if (!isSamePassword && password !== foundUser.password) { 
             req.flash("error", "Invalid credentials");
             res.redirect("/auth/signin");
         }
@@ -47,21 +47,21 @@ router.get('/signup', function(req, res, next) {
 });
 
 
-router.post('/signup', async (req, res, next) => {  
+router.post('/signup', async (req, res) => {  
   try {
     const newUser = { ...req.body };
     
       const foundUser = await userModel.findOne({ email: newUser.email });
 
       if (foundUser) {
-          //req.flash("success", `Welcome back ! ${foundUser.firstName}`);
+          req.flash("success", `Welcome back ! ${foundUser.firstName}`);
           res.redirect("/auth/signin");
       }
       else {
           const hashedPassword = bcrypt.hashSync(newUser.password, 10);
           newUser.password = hashedPassword;
           await userModel.create(newUser);
-          //req.flash("success", "Welcome, please sign in ");
+          req.flash("success", `Welcome ${foundUser.firstName}, please sign in `);
           res.redirect("/auth/signin");
       }  
     }
@@ -71,7 +71,7 @@ router.post('/signup', async (req, res, next) => {
       for (field in err.errors) {
           errorMessage += err.errors[field].message + "\n";
       }
-      //req.flash("error", errorMessage);
+      req.flash("error", errorMessage);
       res.redirect("/auth/signup");
   }
   // next(err)

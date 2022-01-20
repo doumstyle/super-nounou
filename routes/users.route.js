@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const Users = require("./../models/users.model");
-const mongoose = require("mongoose");
+const uploader = require("./../config/cloudinary.config");
+const protecRoute = require("./../middlewares/protectRoute");
+
+router.use(protecRoute);
+
 
 router.get("/", (req, res, next) => {
   
@@ -14,11 +18,9 @@ router.get("/", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/:id", (req, res, next) => {
+router.get("/:id([a-f0-9]{24})", (req, res, next) => {
   console.log(req.params);
-  const isValidId = mongoose.isValidObjectId(req.params.id);
   const id = req.params.id;
-  if (isValidId) {
     Users.findById(id)
       .then((user) => {
         console.log(user);
@@ -28,57 +30,65 @@ router.get("/:id", (req, res, next) => {
           css: ["users"],
         });
       })
-      .catch((e) => console.error(e));
-  } else {
-    next();
-  }
+      .catch(next);
 });
 
 router.get("/create", (req, res, next) => {
   res.render("users/createUser.hbs");
 });
 
-router.post("/create", (req, res) => {
-  console.log(req.body);
-	Users.create(req.body)
-    .then((newUser) => {
-      console.log("NewUser: ", newUser);
+router.post("/create", uploader.single("picture"), async (req, res,next) => {
+	const newUser = { ...req.body };
+	if (!req.file) newUser.picture = undefined;
+	else newUser.picture = req.file.path;
+
+	try {
+	await Users.create(newUser);
+	  console.log("NewUser: ", newUser);
+	  console.log("req.file >>",req.file);
       res.redirect("/users");
-    })
-    .catch((e) => console.error(e));
+	}
+    catch(err) {
+		next(err);
+	}
 });
 
-router.get("/id/delete", async (req, res) => {
+router.get("/id/delete", async (req, res, next) => {
 	const id = req.params.id;
 	try {
 		await Users.findByIdAndDelete(id);
 		res.redirect("/users");
 	} catch (error) {
-		console.error(error);
+		next(error);
 	}
 });
 
-router.get("/:id/update", (req, res) => {
+router.get("/:id/update", (req, res, next) => {
 	const id = req.params.id;
-
+	
 	Users.findById(id)
 		.then((user) => {
 			res.render("users/updateUser.hbs", {
 				user: user,
 			});
 		})
-		.catch((e) => console.error(e));
-});
+		.catch(next)
+	});
 
-router.post("/:id/update", (req, res) => {
+
+
+router.post("/:id/update", uploader.single("picture"), (req, res, next) => {
 	const id = req.params.id;
-	Users.findByIdAndUpdate(id, req.body, { new: true })
+	const updatedUser = { ...req.body };
+	if (req.file) updatedUser.picture = req.file.path;
+	Users.findByIdAndUpdate(id, updatedUser, { new: true })
 		.then((updatedUser) => {
 			console.log(updatedUser);
 			res.redirect("/users/" + id);
 		})
-		.catch((e) => console.error(e));
+		.catch(next)
 });
+
 
 
 module.exports = router;

@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const Matches = require("../models/matches.model");
 const mongoose = require("mongoose");
+const protectRoute = require("./../middlewares/protectRoute");
+
+router.use(protectRoute);
+
 
 router.get("/", (req, res) => {
   res.render("matches/contacts");  
