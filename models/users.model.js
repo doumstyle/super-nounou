@@ -25,6 +25,10 @@ const usersSchema = new Schema({
 			);
 		},
 	},
+    address: String,
+    latitude: Number,
+    longitude: Number,
+
     cellphone: String,
 
     picture: String,
