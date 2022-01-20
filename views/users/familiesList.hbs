@@ -13,6 +13,9 @@
 			<p class="card-text">Kids Age : {{this.kidsAge}}</p>
 			<a href="/users/{{this._id}}">More info...</a>
 		</div>
-	'{{/each}}
+		<form action="/matches/{{this._id}}" method="post">
+			<button class="fas fa-heart ml-2"></button>
+		</form>
 	</div>
+	{{/each}}
 </div>
