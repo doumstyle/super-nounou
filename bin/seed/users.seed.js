@@ -300,7 +300,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427161/images-4_rcjqon.jpg",
     numberOfKids: 1,
-    kidsAge: 5,
+    kidsAge: [5],
     description:
       "Pierre is full of energy, he likes reading and playing football",
     availability: "afterSchool",
@@ -319,7 +319,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610871/Super%20Nounou/twokids_lel338.jpg",
     numberOfKids: 2,
-    kidsAge: 5,
+    kidsAge: [5, 7],
     description:
       "Clara and Peter loves playing together. Clara play piano and Peter play tennis",
     availability: "afterSchool",
@@ -338,7 +338,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/twoboys_thalau.jpg",
     numberOfKids: 1,
-    kidsAge: 1,
+    kidsAge: [1],
     description: "Arthur is a lovely baby who sleep all the time",
     availability: "fullTime",
   },
@@ -356,7 +356,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/geese-2494952__480_lcgxoy.webp",
     numberOfKids: 2,
-    kidsAge: 7,
+    kidsAge: [7, 4],
     description: "As we finish late with help for our children homework",
     availability: "afterSchool",
   },
@@ -374,7 +374,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/touch-baby_haebel.webp",
     numberOfKids: 1,
-    kidsAge: 03,
+    kidsAge: [3],
     description: "Clara is very sweet",
     availability: "evening",
   },
@@ -391,7 +391,7 @@ const users = [
     longitude: 2.284250,
     picture:"https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/familyandbaby_ckqbqe.webp",
     numberOfKids: 1,
-    kidsAge: 06,
+    kidsAge: [6],
     description: " Antoine is allergic to milk",
     availability: "afterSchool",
   },
@@ -409,7 +409,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/lowAge_u3k9rk.webp",
     numberOfKids:1,
-    kidsAge: 08,
+    kidsAge: [8],
     description: "Chloé love reading",
     availability: "fullTime",
   },
@@ -426,8 +426,8 @@ const users = [
     longitude: 2.284250,
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/family3people2_dumhwm.jpg",
-    numberOfKids: 1,
-    kidsAge: 1,
+    numberOfKids: 2,
+    kidsAge: [1, 3],
     description: "Arthur is a lovely baby who sleep all the time",
     availability: "fullTime",
   },

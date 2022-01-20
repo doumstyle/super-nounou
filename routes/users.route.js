@@ -8,7 +8,8 @@ router.get("/", (req, res, next) => {
     .then((users) => {
       res.render("users/usersList", {
         users: users,
-        css: ["users"],
+        css: ["users", "sign"],
+        js: ["carousel"]
       });
     })
     .catch(next);
@@ -25,7 +26,7 @@ router.get("/:id", (req, res, next) => {
 
         res.render("users/oneUser.hbs", {
           user: user,
-          css: ["users"],
+          css: ["oneUser"],
         });
       })
       .catch((e) => console.error(e));
@@ -35,7 +36,9 @@ router.get("/:id", (req, res, next) => {
 });
 
 router.get("/create", (req, res, next) => {
-  res.render("users/createUser.hbs");
+  res.render("users/createUser.hbs", {
+    css: ["create"]
+  });
 });
 
 router.post("/create", (req, res) => {

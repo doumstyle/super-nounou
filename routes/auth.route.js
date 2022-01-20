@@ -4,7 +4,9 @@ const bcrypt = require("bcrypt");
 const userModel = require("../models/users.model");
 
 router.get('/signin', function(req, res, next) {
-  res.render('auth/signin');
+  res.render('auth/signin', {
+    css: ['sign']
+  });
 });
 
 
@@ -43,7 +45,9 @@ router.post('/signin', async (req, res, next) => {
 
 
 router.get('/signup', function(req, res, next) {
-  res.render('auth/signup');
+  res.render('auth/signup', {
+    css: ['sign']
+  });
 });
 
 

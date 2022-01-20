@@ -1,14 +1,4 @@
-<div class="container">
+<div class="container d-flex flex-column align-items-center">
     <h1>Welcome to Super Nounou!</h1>
-    <a href="/auth/signup"><button class="btn btn-lg btn-primary">Sign up</button></a>
-    {{#unless isLoggedIn }}
-    <a href="/auth/signin"><button class="btn btn-lg btn-primary">Sign in</button></a>
-    {{/unless}}
-    {{#if isLoggedIn }}
-    <a href="/auth/signout"><button class="btn btn-lg btn-primary">Sign out</button></a>
-    {{/if}}
-
-    <a href="/users/create"><button class="btn btn-lg btn-primary">Create your profile</button></a>
-
 </div>
 

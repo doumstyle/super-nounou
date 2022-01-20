@@ -1,44 +1,120 @@
-<form action="/users/{{user._id}}/update" method="POST" enctype="multipart/form-data">
+<div class="container">
+  <form
+    action="/users/{{user._id}}/update"
+    method="POST"
+    enctype="multipart/form-data"
+	class="d-flex flex-column"
+  >
 
-	<label for="firstName">First name:</label>
-	<input type="text" id="firstName" name="firstName" required value={{user.firstName}}/>
+    <div class="form-row">
+      <div class="form-group col-4">
+        {{!-- <label for="firstName">Firstname</label> --}}
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          value="{{user.firstName}}"
+		  placeholder="Firstname"
+		  class="form-control"
+        />
+      </div>
+      <div class="form-group col">
+        {{!-- <label for="lastName">Lastname</label> --}}
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          value={{user.lastName}}
+		  placeholder="Lastname"
+		  class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        {{! <label for="role">Role:</label> }}
+        <input type="hidden" id="role" name="role" value={{user.role}} class="form-control" />
+      </div>
+      <div class="form-group col">
+        {{!-- <label for="age">Age</label> --}}
+        <input type="number" id="age" name="age" value={{user.age}} placeholder="Age" class="form-control" />
+      </div>
+    </div>
 
-	<label for="lastName">Last name:</label>
-	<input type="text" id="lastName" name="lastName" value={{user.lastName}}/>
+    <div class="form-row">
+		<div class="form-group col-6">
+		  {{!-- <label for="cellphone">Cellphone</label> --}}
+		  <input
+			type="text"
+			id="cellphone"
+			name="cellphone"
+			value={{user.cellphone}}
+			placeholder="Cellphone"
+			class="form-control"
+		  />
+		</div>
+		<div class="form-group col">
+		  {{!-- <label for="experience">Experience</label> --}}
+		  <input
+			type="number"
+			id="experience"
+			name="experience"
+			value="{{user.experience}}" 
+			placeholder="Experience"
+			class="form-control"
+		  />
+		</div>
+	</div>
 
-    <label for="role">Role:</label>
-	<input type="hidden" id="role" name="role"value={{user.role}} />
+    <div class="form-group">
+      {{!-- <label for="resume">Resume</label> --}}
+      <textarea
+        type="text"
+        id="resume"
+        name="resume"
+        value="{{user.resume}}"
+		placeholder="Resume"
+		class="form-control"
+      ></textarea>
+    </div>
 
-    <label for="age">Age</label>
-	<input type="text" id="age" name="age" value={{user.age}} />
+    <div class="form-row">
+		<div class="form-group col-4">
+		  {{!-- <label for="numberOfKids">Number of kids</label> --}}
+		  <input
+			type="text"
+			id="numberOfKids"
+			name="numberOfKids"
+			value={{user.numberOfKids}}
+			placeholder="Number of Kids"
+				class="form-control"
+		  />
+		</div>
+		<div class="form-group col">
+		  {{!-- <label for="kidsAge">Kids age</label> --}}
+		  <input type="text" id="kidsAge" name="kidsAge" value="{{user.kidsAge}}" placeholder="Kids Age" class="form-control"/>
+		</div>
+		<div class="form-group col">
+		  {{!-- <label for="availability">Availability</label> --}}
+		  <select name="availability" id="availability" class="form-control">
+			<option value="fullTime">Full Time</option>
+			<option value="partTime">Part Time</option>
+			<option value="evening">Evening</option>
+			<option value="afterSchool">After School</option>
+		  </select>
+		</div>
+	</div>
 
-	<label for="cellphone">cellphone:</label>
-	<input type="text" id="cellphone" name="cellphone" value={{user.cellphone}} />
+    <div class="form-group">
+      {{!-- <label for="picture">Picture:</label> --}}
+      <input
+        type="file"
+        id="picture"
+        name="picture"
+        class="form-control form-control-lg p-1"
+      />
+    </div>
 
-	<label for="experience">experience:</label>
-	<input type="text" id="experience" name="experience"value={{user.experience}}/>
+    <button class="btn btn-lg btn-primary d-flex align-self-center">Update</button>
 
-    <label for="resume">resume:</label>
-	<input type="text" id="resume" name="resume"value={{user.resume}}/>
-
-    <label for="numberOfKids">Number of kids:</label>
-	<input type="text" id="numberOfKids" name="numberOfKids"value={{user.numberOfKids}} />
-
-    <label for="kidsAge">Kids age:</label>
-	<input type="text" id="kidsAge" name="kidsAge" value={{user.kidsAge}}/>
-	
-	<label for="availability">Availability: </label>
-	<select name="availability" id="availability">
-		<option value="fullTime">Full Time</option>
-		<option value="partTime">Part Time</option>
-		<option value="evening">Evening</option>
-        <option value="afterSchool">After School</option>
-	</select>
-
-	<label for="picture">Picture:</label>
-
-	<input type="text" id="picture" name="picture" />
-
-	<button>Update your profile</button>
-
-</form>
+  </form>
+</div>
