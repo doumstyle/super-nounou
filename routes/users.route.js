@@ -45,6 +45,7 @@ router.get("/:id([a-f0-9]{24})", (req, res, next) => {
 
 router.get("/create", (req, res, next) => {
   res.render("users/createUser.hbs", {
+    role: req.session.currentUser.role,
     css: ["create"],
   });
 });
