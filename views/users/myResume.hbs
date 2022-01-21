@@ -1,0 +1,16 @@
+<h2>My resume</h2>
+
+<div class="container d-flex justify-content-center ml-auto">
+	<div class="card mb-3">
+		<img src="{{currentUser.picture}}" alt="currentUser.lastName" class="card-img-top">
+		<div class="card-body">
+			<h5 class="card-title">{{currentUser.firstName}} {{currentUser.lastName}}</h5>
+			<p class="card-text">{{currentUser.address}}</p>
+			<p class="card-text"><i class="fas fa-mobile-alt mr-2"></i>{{currentUser.cellphone}}</p>
+			<p class="card-text">{{currentUser.resume}}</p>
+			<p class="card-text">Available: {{currentUser.availability}}</p>
+            <i class="fas fa-edit"></i> <a href="/users/{{currentUser._id}}/update">Update my profile</a>
+            <i class="fas fa-trash"></i><a href="/users/{{currentUser._id}}/delete">Delete my profile</a>
+		</div>
+	</div>
+</div>

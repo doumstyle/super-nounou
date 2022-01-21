@@ -1,0 +1,13 @@
+<h1>My matches</h1>
+
+
+<ul style="list-style-type: none;">
+   {{#each matches}} 
+   <li class="row">      
+      <a class="card col-6" href="/users/{{this.liker._id}}" target="_blank"><img width="250em" src="{{this.liker.picture}}" alt="{{this.liker.firstName}}">{{this.liker.firstName}} {{this.liker.lastName}}</a>
+      <a class="card col" href="/users/{{this.liked._id}}" target="_blank" ><img src="{{this.liked.picture}}" alt="{{this.liked.firstName}}">{{this.liked.firstName}} {{this.liked.lastName}}</a>
+
+   </li>
+   {{/each}}
+</ul>
+

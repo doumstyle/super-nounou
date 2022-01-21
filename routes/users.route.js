@@ -1,9 +1,16 @@
 const router = require("express").Router();
 const Users = require("./../models/users.model");
 const uploader = require("./../config/cloudinary.config");
-const protecRoute = require("./../middlewares/protectRoute");
+const protectRoute = require("./../middlewares/protectRoute");
 
-router.use(protecRoute);
+router.use(protectRoute);
+
+router.get("/my-resume", (req, res, next) => {
+  res.render("users/myResume")
+});
+router.get("/my-family", (req, res, next) => {
+  res.render("users/myFamily")
+});
 
 router.get("/", (req, res, next) => {
   Users.find({ role: { $ne: req.session.currentUser.role } })
@@ -70,7 +77,7 @@ router.post("/create", uploader.single("picture"), async (req, res, next) => {
   }
 });
 
-router.get("/id/delete", async (req, res, next) => {
+router.get("/:id/delete", async (req, res, next) => {
   const id = req.params.id;
   try {
     await Users.findByIdAndDelete(id);
@@ -81,22 +88,11 @@ router.get("/id/delete", async (req, res, next) => {
 });
 
 router.get("/:id/update", (req, res, next) => {
-  const id = req.params.id;
-
-  Users.findById(id)
-    .then(user => {
-      if (req.session.currentUser.role === "babysitter") {
-        res.render("users/updateFamily.hbs", {
-          family: user
-        });
-      } else if (req.session.currentUser.role === "family") {
-        res.render("users/updateBabysitter.hbs", {
-          babysitter: user
-        });
+  console.log(req.session.currentUser)
+        res.render("users/updateUser.hbs");
       }
-    })
-    .catch(next);
-});
+)
+
 
 router.post("/:id/update", uploader.single("picture"), (req, res, next) => {
   const id = req.params.id;

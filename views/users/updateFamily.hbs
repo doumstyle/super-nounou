@@ -1,5 +1,5 @@
 <div class="container">
-	<form action="/users/{{user._id}}/update" method="POST" enctype="multipart/form-data" class="d-flex flex-column">
+	<form action="/users/{{family._id}}/update" method="POST" enctype="multipart/form-data" class="d-flex flex-column">
 
 		<div class="form-row">
 			<div class="form-group col-4">
@@ -41,27 +41,7 @@
 				class="form-control"></textarea>
 		</div>
 
-		<div class="form-row">
-			<div class="form-group col-4">
-				{{!-- <label for="numberOfKids">Number of kids</label> --}}
-				<input type="text" id="numberOfKids" name="numberOfKids" value="{{family.numberOfKids}}"
-					placeholder="Number of Kids" class="form-control" />
-			</div>
-			<div class="form-group col">
-				{{!-- <label for="kidsAge">Kids age</label> --}}
-				<input type="text" id="kidsAge" name="kidsAge" value="{{family.kidsAge}}" placeholder="Kids Age"
-					class="form-control" />
-			</div>
-			<div class="form-group col">
-				{{!-- <label for="availability">Availability</label> --}}
-				<select name="availability" id="availability" class="form-control">
-					<option value="fullTime">Full Time</option>
-					<option value="partTime">Part Time</option>
-					<option value="evening">Evening</option>
-					<option value="afterSchool">After School</option>
-				</select>
-			</div>
-		</div>
+		
 
 		<div class="form-group">
 			{{!-- <label for="picture">Picture:</label> --}}
