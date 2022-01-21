@@ -1,0 +1,12 @@
+.card {
+    border: none;
+    width: 30em;
+}
+
+.fa-edit, .fa-user-slash {
+    font-size: 3rem;
+}
+
+.fa-user-slash {
+    color: crimson;
+}

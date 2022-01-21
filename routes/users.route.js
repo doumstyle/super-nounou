@@ -6,20 +6,17 @@ const protecRoute = require("./../middlewares/protectRoute");
 router.use(protecRoute);
 
 router.get("/", (req, res, next) => {
-  //const role = req.session.currentUser.role; //babysitter
-  let userType = ""; //babysitter or family
-  console.log(req.session.currentUser.role);
   Users.find({ role: { $ne: req.session.currentUser.role } })
     .then(users => {
       if (req.session.currentUser.role === "babysitter") {
         res.render("users/familiesList", {
           families: users,
-          css: ["users", "sign"]
+          css: ["sign", "babysittersList"]
         });
       } else if (req.session.currentUser.role === "family") {
         res.render("users/babysittersList", {
           babysitters: users,
-          css: ["users", "sign"]
+          css: ["sign", "babysittersList"]
         });
       }
       else return res.send("wrong user role !")
@@ -28,19 +25,18 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/:id([a-f0-9]{24})", (req, res, next) => {
-  console.log(req.params);
   const id = req.params.id;
   Users.findById(id)
     .then(user => {
       if (req.session.currentUser.role === "babysitter") {
-        res.render("users/oneBabysitter.hbs", {
-          babysitter: user,
-          css: ["users"]
-        });
-      } else if (req.session.currentUser.role === "family") {
         res.render("users/oneFamily.hbs", {
           family: user,
-          css: ["users"]
+          css: ["oneFamily"]
+        });
+      } else if (req.session.currentUser.role === "family") {
+        res.render("users/oneBabysitter.hbs", {
+          babysitter: user,
+          css: ["oneFamily"]
         });
       }
     })
@@ -90,12 +86,12 @@ router.get("/:id/update", (req, res, next) => {
   Users.findById(id)
     .then(user => {
       if (req.session.currentUser.role === "babysitter") {
-        res.render("users/updateBabysitter.hbs", {
-          babysitter: user
-        });
-      } else if (req.session.currentUser.role === "family") {
         res.render("users/updateFamily.hbs", {
           family: user
+        });
+      } else if (req.session.currentUser.role === "family") {
+        res.render("users/updateBabysitter.hbs", {
+          babysitter: user
         });
       }
     })

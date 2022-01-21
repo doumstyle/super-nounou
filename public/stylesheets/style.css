@@ -21,7 +21,7 @@ body {
 .container h1 {
   position: fixed;
   bottom: 12rem;
-  font-size: 4.5em;
+  font-size: 4em;
   color: #fff;
   text-shadow: 5px 5px 5px black;
 }

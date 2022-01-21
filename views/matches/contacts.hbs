@@ -1,16 +1,26 @@
 <div class="container">
-
-    <h1>This is a match !</h1>
-    <div class="row">
-        <div class="col-md-6">
-            <p><img src="{{matched.liker.picture}}" alt="{{matched.liker.firstName}}"></p>
-            <p>{{matched.liker.firstName}} {{matched.liker.firstName}}</p>
-            <p><i class="fas fa-phone"></i>{{matched.liker.cellphone}}</p>
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4">
+            <div class="card">
+              <img src="{{matched.liker.picture}}" class="card-img-top" alt="{{matched.liker.firstName}}">
+              <div class="card-body">
+                <h5 class="card-title">{{matched.liker.firstName}} {{matched.liker.lastName}}</h5>
+                <p class="card-text"><i class="fas fa-mobile-alt mr-2"></i>{{matched.liker.cellphone}}</p>
+                <p class="card-text"><i class="far-fa-home mr-2"></i>{{matched.liker.address}}</p>
+                <a href="/" class="btn btn-primary">Go Back Home</a>
+              </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p><img src="{{matched.liked.picture}}" alt="{{matched.liked.firstName}}"></p>
-            <p>{{matched.liked.firstName}} {{matched.liked.firstName}}</p>
-            <p><i class="fas fa-phone">{{matched.liked.cellphone}}</p></i>
+        <div class="col mb-4">
+            <div class="card">
+              <img src="{{matched.liked.picture}}" class="card-img-top" alt="{{matched.liked.firstName}}">
+              <div class="card-body">
+                <h5 class="card-title">{{matched.liked.firstName}} {{matched.liked.lastName}}</h5>
+                <p class="card-text"><i class="fas fa-mobile-alt mr-2"></i>{{matched.liked.cellphone}}</p>
+                <p class="card-text"><i class="far-fa-home mr-2"></i>{{matched.liked.address}}</p>
+                <a href="/" class="btn btn-primary">Go Back Home</a>
+              </div>
+            </div>
         </div>
     </div>
 </div>

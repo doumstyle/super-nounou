@@ -1,9 +1,16 @@
-<div class="container">
-	<div class="card" style="background-color: antiquewhite;">
-		<img src="{{family.picture}}" alt="{{family.lastName}}" />
-		<p>Name: {{family.firstName}} {{family.lastName}}</p>
-		<p>Age: {{family.age}} </p>       
-		<a href="/users/{{family._id}}/delete"><i class="fas fa-family-slash"></i></a>
-		<a href="/users/{{family._id}}/update"><i class="far fa-edit"></i></a>
+<div class="container d-flex justify-content-center ml-auto">
+	<div class="card mb-3">
+		<img src="{{family.picture}}" alt="family.lastName" class="card-img-top">
+		<div class="card-body">
+			<h5 class="card-title">{{family.firstName}} {{family.lastName}}</h5>
+			<p class="card-text">{{family.address}}</p>
+			<p class="card-text"><i class="fas fa-mobile-alt mr-2"></i>{{family.cellphone}}</p>
+			<p class="card-text">{{family.numberOfKids}} kid(s)</p>
+			<p class="card-text">{{family.kidsAge}} years old</p>
+			<p class="card-text">{{family.description}}</p>
+			<p class="card-text">Available: {{family.availability}}</p>
+			<a href="/users/{{family._id}}/update" class="fas fa-edit"></a>
+			<a href="/users/{{family._id}}/delete" class="fas fa-user-slash"></a>
+		</div>
 	</div>
 </div>
