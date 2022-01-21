@@ -1,12 +1,11 @@
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url("../images/background.jpg") no-repeat center center;
-  background-size: cover;
 }
 
 .navbar {
   padding: 1rem 1rem;
-  opacity: .8;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar a {
@@ -14,14 +13,21 @@ body {
   border-radius: 2em;
 }
 
-.container {
-  height: 80vh;
+.jumbotron {
+  background: url("../images/background.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
 }
 
-.container h1 {
-  position: fixed;
-  bottom: 12rem;
-  font-size: 4em;
-  color: #fff;
+.jumbotron > div {
+  position: relative;
+  top: 40em;
+  color: white;
   text-shadow: 5px 5px 5px black;
+}
+
+.footer {
+  background-color: dimgray;
+  color: white;
+  font-size: 1.3em;
 }

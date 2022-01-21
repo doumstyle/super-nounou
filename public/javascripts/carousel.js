@@ -23,3 +23,5 @@ const handleClick = (event) => {
 }
 
 btns.forEach(btn => btn.onclick = handleClick);
+
+
