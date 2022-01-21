@@ -47,10 +47,16 @@ router.get("/:id([a-f0-9]{24})", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/create", (req, res, next) => {
-  res.render("users/createUser.hbs", {
-    css: ["create"],
+router.get("/create", (req, res, next) => {  
+  if (req.session.currentUser.role === "babysitter") {
+  res.render("users/createBabysitter",{
+    role : req.session.currentUser.role
   });
+  } else if (req.session.currentUser.role = "family") {
+    res.render("users/createFamily",{
+      role : req.session.currentUser.role
+    });
+  }
 });
 
 router.post("/create", uploader.single("picture"), async (req, res, next) => {
