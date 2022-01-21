@@ -2,6 +2,8 @@ const router = require("express").Router();
 const Users = require("./../models/users.model");
 const uploader = require("./../config/cloudinary.config");
 const protecRoute = require("./../middlewares/protectRoute");
+const mongoose = require("mongoose");
+const haversine = require("haversine-distance");
 
 router.use(protecRoute);
 
@@ -23,6 +25,44 @@ router.get("/", (req, res, next) => {
     })
     .catch(next);
 });
+
+
+router.get("/", (req, res, next) => {
+
+  console.log('# req.session.currentUser', req.session.currentUser)
+  // find the list of !role users sorted by geospatial proximity
+  const findQuery = { 
+    role:{ $ne: req.session.currentUser.role},
+    coordinates: {
+      $near: {
+        $geometry: { type: "Point", coordinates: req.session.currentUser.coordinates } }
+      }
+    }
+ 
+   Users.find(findQuery)
+     .then((users) => {
+        const [loggedUserLat, loggedUserLong] = req.session.currentUser.coordinates
+        users = users.map(_ => {
+          const [lat, long] = _.coordinates
+
+          console.log('@ cal', loggedUserLat, loggedUserLong, lat, long)
+
+          _.distance = haversine({latitude: loggedUserLat, longitude: loggedUserLong}, 
+            {latitude: lat,  longitude: long})
+          console.log('@ distance', haversine({latitude: loggedUserLat, longitude: loggedUserLong}, 
+            {latitude: lat,  longitude: long}))
+
+          return _ 
+        })
+
+        res.render("users/usersList", {
+          users: users,
+          css: ["users", "sign"],
+        });
+     })
+     .catch(next);
+ });
+ 
 
 router.get("/:id([a-f0-9]{24})", (req, res, next) => {
   const id = req.params.id;
