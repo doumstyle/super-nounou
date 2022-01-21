@@ -38,7 +38,7 @@ const usersSchema = new Schema({
     numberOfKids: Number,
    
     kidsAge: {
-        type: [Number]
+        type: [String]
     },
 
     availability: {
